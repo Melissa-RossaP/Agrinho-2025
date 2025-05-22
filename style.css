@@ -1,0 +1,513 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color: #dcf5c0;
+    line-height: 1.6;
+    align-items: center;
+    
+}
+
+.Meio{
+  padding: 30px;
+}
+
+.introdução{
+  color: #122e05;
+  size: 3em;
+  justify-content: center;
+  align-items: center;
+  padding-right: 60px;
+  padding-left: 60px;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+/* Fazendo o header */
+header {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centraliza os itens  */
+    align-items: center; /* Alinha no centro */
+    width: 100%; /* Largura igual ao tamanho da tela */
+    height: 20vh; /* Altura igual ao tamanho da tela */
+    padding: 0 20px; /* Espaçamento lateral para não grudar nas bordas */
+    background-color: rgb(128, 187, 112); /* Cor de fundo do header */
+    color: rgb(24, 66, 12); /* Cor do texto */
+    box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
+    gap: 400px; /* espaço entre os itens */
+    border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do header */
+  }
+  
+ header h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(1.5em, 5vw, 2.5em); /* tamanho mínimo, ideal com base na tela, máximo */
+  margin: 0 auto;
+  text-align: center;
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+/* Ajusta o tamanho em telas médias */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+}
+
+/* Ajusta ainda mais em telas pequenas */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+}
+  
+.Logo{
+   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.Logo:hover{
+transform: scale(1.2);
+cursor: pointer;
+}
+
+.Logo img{
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgb(52, 78, 50);
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    display: flex; /* Alinha os itens em linha */
+    flex-direction: column; /* Agora os itens estarão em coluna */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-bottom: 10px; /* Espaço entre os itens */
+  }
+  
+  nav ul li a {
+    display: inline-block; 
+    color: rgb(29, 75, 25); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1em;
+    padding: 3px 6px; /* Espaçamento interno ao redor do texto */
+    background-color: rgb(81, 156, 74); /*  fundo com a mesma cor da borda */
+    border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
+    border-radius: 5px; /* Bordas meio redonda  */
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgb(58, 119, 51);
+    border-color: rgb(52, 78, 50);
+    color: rgb(21, 51, 12);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.Explicacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  padding: 20px 30px; /* padding mais compacto */
+  overflow: hidden;
+  border: 2px solid rgb(46, 97, 42);
+  border-radius: 20px;
+  background-color: rgb(119, 187, 109);
+  color: rgb(40, 73, 30);
+  text-align: center; /* Centraliza o texto dentro */
+  max-width: 1000px; /* Limita a largura para telas grandes */
+  margin: 20px auto; /* Centraliza horizontalmente na página */
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 5%;
+}
+
+/*Carrossel*/
+
+.carrossel {
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar linha em telas menores */
+  gap: 40px;
+  justify-content: center;
+  margin: 30px 20px; /* adiciona margem lateral */
+ overflow: visible;
+ 
+ 
+}
+.item {
+  position: relative;
+  width: 100%;
+  max-width: 200px; /* mantém tamanho máximo */
+  aspect-ratio: 4 / 5; /* mantém proporção semelhante a 200x250 */
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+  
+}
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+}
+.texto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(184, 224, 199, 0.8);
+  color: #16380e;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  padding: 1px; /* evita que o texto encoste nas bordas */
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+}
+a {
+  color: #16380e;
+  font-weight: bold;
+  font-size: 1em;  
+  margin-top: 1px; /* separa do texto acima */
+}
+.item input:checked ~ .texto {
+  opacity: 1;
+  pointer-events: auto;
+}
+.item input {
+  display: none;
+}
+
+.item:hover{
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+
+/*Tecnologia mini Título + o Texto */
+
+.tecnologia {
+  text-align: center;
+  font-size: 2em;
+  color: #0e2538;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* destaque maior */
+  text-decoration-color: #414077; /* reforça a cor */
+  text-decoration-style: solid;
+}
+.TecTexto{
+  overflow: hidden;
+  text-align: center;
+  color: #061d30;
+  background-color: #d1e2e9;
+  border: 3px solid #b9cbd6;
+  border-radius: 10px;
+  font-size: 1em; 
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/*Agora os Exemplos*/
+
+.TecExemplos{
+  text-align: center;
+  font-size: 1.5em;
+  color: #0e3821;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* destaque maior */
+  text-decoration-color: #497740; /* reforça a cor */
+  text-decoration-style: solid;
+
+
+}
+
+
+/* Estilo da linha do tempo */
+
+.Titu{
+  text-align: center;
+  font-size: 2em;
+  color: #0e3812;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* destaque maior */
+  text-decoration-color: #597740; /* reforça a cor */
+  text-decoration-style: solid;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 800px;
+  padding: 10px;
+  
+}
+
+
+/* Estilo para os eventos da linha do tempo */
+.evento {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+
+}
+
+.descrição {
+  transition: background-color 0.3s, transform 0.3s, color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: default; /* só texto normal */
+}
+
+.descrição:hover {
+  background-color: rgb(106, 150, 86);
+  color: white;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+/* Estilo para o ano */
+.ano {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #16360a;
+  margin-right: 20px;
+  z-index: 1; /*sobrepo*/
+}
+
+/* Estilo da descrição dos eventos (quadradinhos) */
+.descrição {
+  background-color: #aaf1ad;
+  padding: 20px;
+  border-radius: 5px;
+  border: #16380e solid 3px;
+  width: 60%;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.descrição h3 {
+  font-size: 1.3em;
+  color: #143a0f;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.descrição p {
+  font-size: 1em;
+  color: #194210;
+}
+
+
+
+
+
+.FooterCon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 20vh;
+  padding: 15px 20px;
+  background-color: rgb(128, 187, 112);
+  color: rgb(24, 66, 12);
+  box-sizing: border-box;
+  gap: 40px;
+  border: 3px solid rgb(74, 141, 67);
+  text-align: center;
+}
+
+.contatos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contatos a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
+  cursor: pointer;
+}
+
+.contatos a:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+.Ops {
+  font-size: 14px;
+  font-style: italic;
+  color: rgb(24, 66, 12);
+  width: 100%;
+  margin-top: 10px;
+  user-select: none;
+}
+
+
+/* RESPONSIVIDADE: Ajustes para telas menores ou com zoom */
+
+
+@media (max-width: 768px), (max-zoom: 1.1) {
+  .FooterCon {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .Eba {
+    font-size: 20px;
+  }
+
+  .contatos img {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  header h1 {
+    font-size: 1em;
+  }
+
+  
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .carrossel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto{
+    width: 100%;
+    text-align: center;
+  }
+
+
+  h2, h3 {
+    font-size: 1em;
+  }
+
+  .carrossel {
+    flex-direction: column;
+  }
+
+  .item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .Logo img {
+    max-height: 7vh;
+  }
+
+  .carrossel img {
+    max-width: 100%;
+  }
+}
+
+
+
+@media (max-width: 768px), (max-zoom: 1.1) {
+  .FooterCon {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .Eba {
+    font-size: 20px;
+  }
+
+  .contatos img {
+    width: 30px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .FooterCon {
+    gap: 60px;
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .evento {
+    flex-direction: column; /* Coloca os itens em uma coluna em vez de uma linha */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .ano {
+    margin-right: 0;
+    margin-bottom: 10px; /* Dá um espaço entre o ano e a descrição */
+  }
+
+  .descricao {
+    width: 90%; /* Ajusta a largura da descrição para ocupar mais espaço */
+  }
+}
+
+@media (max-width: 480px) {
+  .Titu {
+    font-size: 1.5em; /* Diminui o tamanho do título em telas menores */
+  }
+
+  .ano {
+    font-size: 1.2em; /* Ajusta o tamanho da fonte do ano */
+  }
+
+  .descricao {
+    padding: 15px; /* Diminui o padding da descrição em telas pequenas */
+  }
+}
+
+
