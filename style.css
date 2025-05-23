@@ -226,20 +226,137 @@ a {
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
+.TecTexto p{
+  font-size: 0.8em;
+  color: rgb(11, 21, 92);
+}
+
 
 /*Agora os Exemplos*/
 
 .TecExemplos{
   text-align: center;
   font-size: 1.5em;
-  color: #0e3821;
+  color: #15533b;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* destaque maior */
+  text-decoration-color: #3daa6e; /* reforça a cor */
+  text-decoration-style: solid;
+}
+
+.Agro{
+  overflow: hidden;
+  text-align: center;
+  color: #06301c;
+  background-color: #b2eecb;
+  border: 3px solid #265339;
+  border-radius: 10px;
+  font-size: 1em; 
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+   padding: 20px;
+}
+
+.Agro p{
+  font-size: 0.8em;
+  color: rgb(27, 36, 32);
+}
+
+.TiposAgro{
+  text-align: center;
+  font-size: 2em;
+  color: #163107;
   font-family: 'Times New Roman', Times, serif;
   text-decoration: underline;
   text-decoration-thickness: 2px; /* destaque maior */
   text-decoration-color: #497740; /* reforça a cor */
   text-decoration-style: solid;
+}
 
 
+
+
+.AgroEx {
+  display: flex;
+  gap: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #92c08b;
+  border: 3px solid #265326;
+  border-radius: 10px;
+  color: #0b3006;
+  align-items: flex-start;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.AgroEx h2,
+.AgroEx h3 {
+  margin: 0;
+  max-width: 500px;
+}
+
+.AgroEx h2 {
+  font-size: 2em;
+  color: #143d14;
+}
+
+.AgroEx {
+  display: grid;
+  grid-template-columns: 1fr 250px; /* esquerda texto, direita imagem */
+  column-gap: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #92c08b;
+  border: 3px solid #265326;
+  border-radius: 10px;
+  color: #0b3006;
+  align-items: start;
+  transition: transform 0.3s ease;
+}
+
+.AgroEx:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.AgroEx h2 {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #143d14;
+}
+
+.AgroEx h3 {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  margin: 0;
+}
+
+.AgroEx > .comdes {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.AgroEx img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+
+.AgroEx p {
+  font-size: 0.9em;
+  margin: 0;
+  color: #0b3006;
 }
 
 
