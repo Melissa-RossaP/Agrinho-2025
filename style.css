@@ -971,3 +971,57 @@ button:hover {
     gap: 15px;
   }
 }
+
+/* Animação de entrada suave */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação de destaque no botão */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+.quiz-container {
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+
+#scrollToTopBtn {
+  animation: fadeSlideIn 0.8s ease forwards;
+  transition: all 0.3s ease;
+}
+
+
+#scrollToTopBtn:hover {
+  animation: pulse 1s infinite;
+}
+
+
+@media screen and (max-width: 600px) {
+  .quiz-container {
+    animation: fadeSlideIn 1s ease-in-out forwards;
+  }
+
+  #scrollToTopBtn {
+    animation: pulse 2s infinite;
+  }
+}
