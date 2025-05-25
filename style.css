@@ -1000,28 +1000,3 @@ button:hover {
   }
 }
 
-.quiz-container {
-  animation: fadeSlideIn 0.8s ease forwards;
-}
-
-
-#scrollToTopBtn {
-  animation: fadeSlideIn 0.8s ease forwards;
-  transition: all 0.3s ease;
-}
-
-
-#scrollToTopBtn:hover {
-  animation: pulse 1s infinite;
-}
-
-
-@media screen and (max-width: 600px) {
-  .quiz-container {
-    animation: fadeSlideIn 1s ease-in-out forwards;
-  }
-
-  #scrollToTopBtn {
-    animation: pulse 2s infinite;
-  }
-}
