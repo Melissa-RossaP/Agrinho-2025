@@ -74,3 +74,15 @@ nav ul li a:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
+
+.INICIO{
+  overflow: hidden;
+  text-align: center;
+  color: #06301c;
+  background-color: #b2eecb;
+  border: 3px solid #265339;
+  border-radius: 10px;
+  font-size: 1em; 
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+   padding: 20px;
+}
