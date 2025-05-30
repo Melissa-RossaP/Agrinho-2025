@@ -217,7 +217,7 @@ a {
       font-size: 2em;
       z-index: 9999;
        opacity: 1;
-      transition: opacity 1s ease;
+      transition: opacity 5s ease;
     }
 
      #main-content {
@@ -226,7 +226,7 @@ a {
       }
 
     .fade-out {
-    opacity: 0;
+    opacity: 2;
     }
 
 .TecExemplos{
