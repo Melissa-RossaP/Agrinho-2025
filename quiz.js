@@ -131,7 +131,7 @@ document.getElementById('linkContato').addEventListener('click', function(event)
   }
 });
 
-setTimeout(() => {
-      document.getElementById("splash-screen").style.display = "none";
-      document.getElementById("main-content").style.display = "block";
-    }, 3000); // 3000 milissegundos = 3 segundos
+ setTimeout(() => {
+    document.getElementById("splash-screen").classList.add("fade-out");
+    document.getElementById("main-content").classList.add("visible");
+  }, 4000); // 4 segundos

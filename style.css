@@ -1,3 +1,7 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;700&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,7 +27,7 @@ body {
   flex-direction: column;
 }
 
-
+/* Fazendo o header */
 header {
     display: flex; /* Flexbox */
     justify-content: center; /* Centraliza os itens  */
@@ -36,7 +40,7 @@ header {
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
     gap: 400px; /* espaço entre os itens */
     border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
-    overflow: hidden; /* Impede que o conteúdo "saia da tela" */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do header */
   }
   
  header h1 {
@@ -84,7 +88,7 @@ cursor: pointer;
 nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
     display: flex; /* Alinha os itens em linha */
-    flex-direction: column; /*coluna */
+    flex-direction: column; /* Agora os itens estarão em coluna */
     margin: 0;
     padding: 0;
   }
@@ -96,11 +100,11 @@ nav ul {
   nav ul li a {
     display: inline-block; 
     color: rgb(29, 75, 25); /* Cor do texto */
-    text-decoration: none;
+    text-decoration: none; /* Remove o sublinhado */
     font-size: 1em;
-    padding: 3px 6px; 
-    background-color: rgb(81, 156, 74); 
-    border: 2.5px solid rgb(74, 141, 67); 
+    padding: 3px 6px; /* Espaçamento interno ao redor do texto */
+    background-color: rgb(81, 156, 74); /*  fundo com a mesma cor da borda */
+    border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
     border-radius: 5px; /* Bordas meio redonda  */
     transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
@@ -119,15 +123,15 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   font-size: 0.8em;
-  padding: 20px 30px; /* padding */
+  padding: 20px 30px; /* padding mais compacto */
   overflow: hidden;
   border: 2px solid rgb(46, 97, 42);
   border-radius: 20px;
   background-color: rgb(119, 187, 109);
   color: rgb(40, 73, 30);
   text-align: center; /* Centraliza o texto dentro */
-  max-width: 1000px; /* Limita */
-  margin: 20px auto; /* Centraliza horizontalmente */
+  max-width: 1000px; /* Limita a largura para telas grandes */
+  margin: 20px auto; /* Centraliza horizontalmente na página */
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
   margin-bottom: 5%;
 }
@@ -136,10 +140,10 @@ nav ul li a:hover {
 
 .carrossel {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap; /* permite quebrar linha em telas menores */
   gap: 40px;
   justify-content: center;
-  margin: 30px 20px; 
+  margin: 30px 20px; /* adiciona margem lateral */
  overflow: visible;
  
  
@@ -147,8 +151,8 @@ nav ul li a:hover {
 .item {
   position: relative;
   width: 100%;
-  max-width: 200px; 
-  aspect-ratio: 4 / 5; 
+  max-width: 200px; /* mantém tamanho máximo */
+  aspect-ratio: 4 / 5; /* mantém proporção semelhante a 200x250 */
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 10px;
@@ -180,15 +184,14 @@ nav ul li a:hover {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.6s ease;
-  padding: 1px; 
+  padding: 1px; /* evita que o texto encoste nas bordas */
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
-
 a {
   color: #16380e;
   font-weight: bold;
-  font-size: 0.5em;  
-  margin-top: 1px; 
+  font-size: 1em;  
+  margin-top: 1px; /* separa do texto acima */
 }
 .item input:checked ~ .texto {
   opacity: 1;
@@ -203,77 +206,83 @@ a {
   transition: transform 0.3s ease;
 }
 
+.texto p {
+  font-size: 0.8em; 
+  margin: 0; 
+  padding: 0 5px; 
+  overflow: hidden; 
+}
+
 #splash-screen {
-  text-align: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #014421;
-  color: white;
+  background: #014421;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 2em;
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 2.5s ease;
   flex-direction: column;
+  z-index: 9999;
+  color: #ffffff;
+  overflow: hidden;
 }
 
 .splash-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
+/* Animação individual para linha1 */
 .linha1 {
-  font-size: 1em;
-  margin-bottom: 0.5em;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+  opacity: 0;
+  transform: scale(0.8);
+  filter: blur(4px);
+  animation: fadeZoomIn 1.8s ease forwards;
+  animation-delay: 0s;
 }
 
+/* Animação individual para linha2 com delay */
 .linha2 {
-  font-size: 1.4em;
-  font-weight: 300;
-  color: #ffffff;
-  text-shadow: 0px 0px 4px #000;
-  letter-spacing: 2px;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-decoration-color: #74ab71;
-transition: all 1.5s ease;
- background: transparent;    
-  border: none;              
-  outline: none;              
+  font-size: 3em;
+  font-family: 'Playfair Display', serif;
+  color: #a8ffbf;
+  text-shadow: 0 0 12px #79d997;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: scale(0.8);
+  filter: blur(4px);
+  animation: fadeZoomIn 1.8s ease forwards;
+  animation-delay: 1s;
 }
 
-@keyframes pulse {
-  0% { text-shadow: 0 0 4px #5fcf7f; }
-  50% { text-shadow: 0 0 10px #a0f7a0; }
-  100% { text-shadow: 0 0 4px #5fcf7f; }
-}
-
-#splash-screen strong {
-  animation: pulse 3s infinite;
-}
-
-    #main-content {
-      opacity: 0;
-      transition: opacity 2.5s ease;
-      padding: 20px;
-    }
-
-    #main-content.visible {
-      opacity: 1;
-    }
-
-    .fade-out {
+/* Keyframes para o efeito de entrada */
+@keyframes fadeZoomIn {
+  0% {
     opacity: 0;
-    }
+    transform: scale(0.8);
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
 
-
+#splash-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease;
+}
 
 .TecExemplos{
   text-align: center;
@@ -440,8 +449,8 @@ transition: all 1.5s ease;
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #92c08b; /* verde claro */
-  border: 3px solid #265326; /* verde escuro para borda */
+  background-color: #92c08b; 
+  border: 3px solid #265326; 
   border-radius: 10px;
   color: #0b3006; /* verde escuro para texto */
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
@@ -464,8 +473,8 @@ transition: all 1.5s ease;
   color: #13380e;
   font-family: 'Times New Roman', Times, serif;
   text-decoration: underline;
-  text-decoration-thickness: 2px; /* destaque maior */
-  text-decoration-color: #467740; /* reforça a cor */
+  text-decoration-thickness: 2px; 
+  text-decoration-color: #467740;
   text-decoration-style: solid;
 }
 .TecTexto {
@@ -497,8 +506,8 @@ transition: all 1.5s ease;
   color: #0e3812;
   font-family: 'Times New Roman', Times, serif;
   text-decoration: underline;
-  text-decoration-thickness: 2px; /* destaque maior */
-  text-decoration-color: #597740; /* reforça a cor */
+  text-decoration-thickness: 2px; 
+  text-decoration-color: #597740; 
   text-decoration-style: solid;
 }
 
@@ -1044,91 +1053,25 @@ button:hover {
   }
 }
 
-/* Animação de entrada suave */
-@keyframes fadeSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+@media (max-width: 767px) {
+  .linha1 {
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .linha2 {
+    font-size: 2em;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px #79d997;
   }
 }
 
-/* Animação de destaque no botão */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px 10px rgba(0, 123, 255, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes floatIn {
-  from {
-    transform: translateY(20px) scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-}
-
-/* Responsivo para telas pequenas (até 768px) */
-@media (max-width: 768px) {
-  .quiz-container {
-    width: 100%;
-    padding: 16px;
-    font-size: 1rem;
-    animation: fadeUp 0.8s ease forwards;
+@media (min-width: 768px) {
+  .linha1 {
+    font-size: 2.2em;
   }
 
-  .quiz-container .question {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-  }
-
-  .quiz-container .options label {
-    font-size: 0.95rem;
-    padding: 10px;
-    border-radius: 6px;
-  }
-
-  #scrollToTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 16px;
-    padding: 10px 15px;
-    font-size: 0.9rem;
-    border-radius: 40px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    z-index: 999;
-    animation: floatIn 0.6s ease;
-  }
-
-  #scrollToTopBtn:hover {
-    opacity: 0.9;
+  .linha2 {
+    font-size: 3.2em;
   }
 }

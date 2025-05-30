@@ -1,22 +1,33 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color: #dcf5c0;
+    line-height: 1.6;
+    align-items: center;
+    
+}
+
 header {
-    display: flex; /* Flexbox */
-    justify-content: center; /* Centraliza os itens  */
-    align-items: center; /* Alinha no centro */
-    width: 100%; /* Largura igual ao tamanho da tela */
-    height: 20vh; /* Altura igual ao tamanho da tela */
-    padding: 0 20px; /* Espaçamento lateral para não grudar nas bordas */
-    background-color: rgb(128, 187, 112); /* Cor de fundo do header */
-    color: rgb(24, 66, 12); /* Cor do texto */
-    box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
-    gap: 400px; /* espaço entre os itens */
-    border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
-    overflow: hidden; /* Impede que o conteúdo "saia da tela" */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    height: 20vh; 
+    padding: 0 20px; 
+    background-color: rgb(128, 187, 112); 
+    color: rgb(24, 66, 12); 
+    box-sizing: border-box; 
+    gap: 400px; 
+    border: 3px solid rgb(74, 141, 67); 
+    overflow: hidden; 
   }
 
 
  header h1 {
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(1.5em, 5vw, 2.5em); /* tamanho mínimo, ideal com base na tela, máximo */
+  font-size: clamp(1.5em, 5vw, 2.5em); 
   margin: 0 auto;
   text-align: center;
   word-wrap: break-word;
@@ -75,14 +86,31 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-.INICIO{
-  overflow: hidden;
+.titulo-principal {
   text-align: center;
-  color: #06301c;
-  background-color: #b2eecb;
-  border: 3px solid #265339;
+  color: #16380e;        /* verde escuro, combinando com seu tema */
+  font-size: 2.2em;      /* tamanho grande para destaque */
+  margin: 30px 0 20px 0; /* espaço acima e abaixo */
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho{
+display: flex;
+  gap: 10px;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #92c08b;
+  border: 3px solid #265326;
   border-radius: 10px;
-  font-size: 1em; 
+  color: #0b3006;
+  align-items: flex-start;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
-   padding: 20px;
+}
+
+.INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p{
+  margin: 0;
+  padding: 0;
 }
