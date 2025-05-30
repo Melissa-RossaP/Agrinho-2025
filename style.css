@@ -242,7 +242,10 @@ a {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-decoration-color: #74ab71;
-}ransition: all 0.5s ease;
+transition: all 0.5s ease;
+ background: transparent;    
+  border: none;              
+  outline: none;              
 }
 
 @keyframes pulse {
