@@ -13,6 +13,16 @@ header {
     overflow: hidden; /* Impede que o conteúdo "saia da tela" */
   }
 
+
+ header h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(1.5em, 5vw, 2.5em); /* tamanho mínimo, ideal com base na tela, máximo */
+  margin: 0 auto;
+  text-align: center;
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
   nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
     display: flex; /* Alinha os itens em linha */
