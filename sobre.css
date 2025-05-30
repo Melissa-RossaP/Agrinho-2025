@@ -12,3 +12,35 @@ header {
     border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
     overflow: hidden; /* Impede que o conteúdo "saia da tela" */
   }
+
+  nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    display: flex; /* Alinha os itens em linha */
+    flex-direction: column; /*coluna */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-bottom: 10px; /* Espaço entre os itens */
+  }
+  
+  nav ul li a {
+    display: inline-block; 
+    color: rgb(29, 75, 25); /* Cor do texto */
+    text-decoration: none;
+    font-size: 1em;
+    padding: 3px 6px; 
+    background-color: rgb(81, 156, 74); 
+    border: 2.5px solid rgb(74, 141, 67); 
+    border-radius: 5px; /* Bordas meio redonda  */
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgb(58, 119, 51);
+    border-color: rgb(52, 78, 50);
+    color: rgb(21, 51, 12);
+    transform: scale(1.2);
+    cursor: pointer;
+}
