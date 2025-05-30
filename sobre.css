@@ -23,6 +23,26 @@ header {
   max-width: calc(100% - 40px);
 }
 
+
+.Logo{
+   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.Logo:hover{
+transform: scale(1.2);
+cursor: pointer;
+}
+
+.Logo img{
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid rgb(52, 78, 50);
+}
+
   nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
     display: flex; /* Alinha os itens em linha */
