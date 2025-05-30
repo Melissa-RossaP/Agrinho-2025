@@ -213,6 +213,7 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
+      font-family: 'Times New Roman', Times, serif;
       font-size: 2em;
       z-index: 9999;
        opacity: 1;
