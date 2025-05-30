@@ -218,7 +218,16 @@ a {
       z-index: 9999;
        opacity: 1;
       transition: opacity 2.5s ease;
-    }
+    
+}
+
+#splash-screen strong {
+  font-weight: 700; /* mais grosso */
+  font-size: 3em;
+  color: #113b17;    /* verde claro */
+  text-shadow: 1px 1px 3px black;
+  letter-spacing: 1px;
+}
 
     #main-content {
       opacity: 0;
