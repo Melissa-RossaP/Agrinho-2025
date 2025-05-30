@@ -1,0 +1,14 @@
+header {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centraliza os itens  */
+    align-items: center; /* Alinha no centro */
+    width: 100%; /* Largura igual ao tamanho da tela */
+    height: 20vh; /* Altura igual ao tamanho da tela */
+    padding: 0 20px; /* Espaçamento lateral para não grudar nas bordas */
+    background-color: rgb(128, 187, 112); /* Cor de fundo do header */
+    color: rgb(24, 66, 12); /* Cor do texto */
+    box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
+    gap: 400px; /* espaço entre os itens */
+    border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
+    overflow: hidden; /* Impede que o conteúdo "saia da tela" */
+  }
