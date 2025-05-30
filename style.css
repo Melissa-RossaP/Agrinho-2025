@@ -23,7 +23,7 @@ body {
   flex-direction: column;
 }
 
-/* Fazendo o header */
+
 header {
     display: flex; /* Flexbox */
     justify-content: center; /* Centraliza os itens  */
@@ -36,7 +36,7 @@ header {
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
     gap: 400px; /* espaço entre os itens */
     border: 3px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
-    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do header */
+    overflow: hidden; /* Impede que o conteúdo "saia da tela" */
   }
   
  header h1 {
@@ -84,7 +84,7 @@ cursor: pointer;
 nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
     display: flex; /* Alinha os itens em linha */
-    flex-direction: column; /* Agora os itens estarão em coluna */
+    flex-direction: column; /*coluna */
     margin: 0;
     padding: 0;
   }
@@ -96,11 +96,11 @@ nav ul {
   nav ul li a {
     display: inline-block; 
     color: rgb(29, 75, 25); /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado */
+    text-decoration: none;
     font-size: 1em;
-    padding: 3px 6px; /* Espaçamento interno ao redor do texto */
-    background-color: rgb(81, 156, 74); /*  fundo com a mesma cor da borda */
-    border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
+    padding: 3px 6px; 
+    background-color: rgb(81, 156, 74); 
+    border: 2.5px solid rgb(74, 141, 67); 
     border-radius: 5px; /* Bordas meio redonda  */
     transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
@@ -119,15 +119,15 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   font-size: 0.8em;
-  padding: 20px 30px; /* padding mais compacto */
+  padding: 20px 30px; /* padding */
   overflow: hidden;
   border: 2px solid rgb(46, 97, 42);
   border-radius: 20px;
   background-color: rgb(119, 187, 109);
   color: rgb(40, 73, 30);
   text-align: center; /* Centraliza o texto dentro */
-  max-width: 1000px; /* Limita a largura para telas grandes */
-  margin: 20px auto; /* Centraliza horizontalmente na página */
+  max-width: 1000px; /* Limita */
+  margin: 20px auto; /* Centraliza horizontalmente */
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
   margin-bottom: 5%;
 }
@@ -136,10 +136,10 @@ nav ul li a:hover {
 
 .carrossel {
   display: flex;
-  flex-wrap: wrap; /* permite quebrar linha em telas menores */
+  flex-wrap: wrap; 
   gap: 40px;
   justify-content: center;
-  margin: 30px 20px; /* adiciona margem lateral */
+  margin: 30px 20px; 
  overflow: visible;
  
  
@@ -147,8 +147,8 @@ nav ul li a:hover {
 .item {
   position: relative;
   width: 100%;
-  max-width: 200px; /* mantém tamanho máximo */
-  aspect-ratio: 4 / 5; /* mantém proporção semelhante a 200x250 */
+  max-width: 200px; 
+  aspect-ratio: 4 / 5; 
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 10px;
@@ -180,14 +180,14 @@ nav ul li a:hover {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.6s ease;
-  padding: 1px; /* evita que o texto encoste nas bordas */
+  padding: 1px; 
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 a {
   color: #16380e;
   font-weight: bold;
   font-size: 0.5em;  
-  margin-top: 1px; /* separa do texto acima */
+  margin-top: 1px; 
 }
 .item input:checked ~ .texto {
   opacity: 1;
@@ -235,14 +235,14 @@ a {
 
 .linha2 {
   font-size: 1.4em;
-  font-weight: 400;
+  font-weight: 300;
   color: #ffffff;
   text-shadow: 0px 0px 4px #000;
   letter-spacing: 2px;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
   text-decoration-color: #74ab71;
-transition: all 0.5s ease;
+transition: all 1.5s ease;
  background: transparent;    
   border: none;              
   outline: none;              
@@ -271,6 +271,8 @@ transition: all 0.5s ease;
     .fade-out {
     opacity: 0;
     }
+
+
 
 .TecExemplos{
   text-align: center;
