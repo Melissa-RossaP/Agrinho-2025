@@ -626,7 +626,8 @@ a {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   color: #09380b; 
   font-size: 1em;
   font-family: Arial, sans-serif;
@@ -679,7 +680,8 @@ button:hover {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
-  width: 200px;            
+  width: 90%;
+  max-width: 200px;
   min-height: 100px;
   text-align: center;
   color: #19460e;
@@ -1063,15 +1065,5 @@ button:hover {
     font-size: 2em;
     letter-spacing: 0.5px;
     text-shadow: 0 0 8px #79d997;
-  }
-}
-
-@media (min-width: 768px) {
-  .linha1 {
-    font-size: 2.2em;
-  }
-
-  .linha2 {
-    font-size: 3.2em;
   }
 }
