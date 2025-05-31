@@ -680,8 +680,7 @@ button:hover {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
-  width: 90%;
-  max-width: 200px;
+  width: 200px;            
   min-height: 100px;
   text-align: center;
   color: #19460e;
@@ -791,6 +790,13 @@ button:hover {
   filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
 }
 
+
+.atributo {
+  display: none;
+}
+
+
+
 .Ops {
   font-size: 12px;
   font-style: italic;
@@ -834,12 +840,13 @@ button:hover {
     padding: 10px;
   }
 
-  .Eba {
-    font-size: 20px;
+  .contatos {
+    justify-content: center;
   }
 
-  .contatos img {
+  .contatos a img {
     width: 30px;
+    height: 30px;
   }
 }
 
