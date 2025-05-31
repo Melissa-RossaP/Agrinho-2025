@@ -777,6 +777,27 @@ button:hover {
   margin-top: 5px;
 }
 
+.contato-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.contato-item:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+.contatos a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .contatos a img {
   width: 35px;
   height: 35px;
@@ -790,11 +811,21 @@ button:hover {
   filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
 }
 
-
 .atributo {
-  display: none;
+  margin-top: 2px;
+  font-size: 5px;
+  line-height: 1.1;
+  margin-top: 3px;
+  text-align: center;
+  max-width: 70px;
+  opacity: 0.5;
+  user-select: none;
 }
 
+.atributo a {
+  color: rgb(24, 66, 12);
+  text-decoration: none;
+}
 
 
 .Ops {
@@ -838,15 +869,28 @@ button:hover {
     flex-direction: column;
     gap: 20px;
     padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .contatos {
-    justify-content: center;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px;
   }
 
-  .contatos a img {
+  .contatos a {
+    margin-bottom: 10px; /* Espaçamento vertical ao quebrar linhas */
+  }
+
+  .contatos img {
     width: 30px;
     height: 30px;
+  }
+
+  .Eba {
+    font-size: 20px;
   }
 }
 
