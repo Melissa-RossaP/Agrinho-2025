@@ -39,17 +39,25 @@ header.menu-aberto {
   height: 30vh;
 }
 
-/* Ajusta o tamanho em telas médias */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2em;
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto; /* <- deixa crescer conforme o conteúdo */
+    min-height: 25vh; /* <- ocupa no mínimo 25% da altura da tela */
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+    gap: 15px;
   }
-}
 
-/* Ajusta ainda mais em telas pequenas */
-@media (max-width: 480px) {
   header h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
+    max-width: 90%;
+    word-wrap: break-word;
+  }
+
+  .Logo img {
+    max-height: 60px;
   }
 }
   
@@ -275,87 +283,102 @@ nav ul li a:hover {
 
 
 
+/* Justifica todos os textos principais */
+body, p, .INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p {
+  text-align: justify;
+}
+
+/* Para telas menores que 768px (tablets, celulares em modo paisagem) */
 @media (max-width: 768px) {
   body {
     padding: 10px;
+    line-height: 1.4;
   }
 
   header {
-    height: auto;
-    padding: 15px 10px;
     flex-direction: column;
-    gap: 1.5rem;
+    height: auto;
+    padding: 10px 5px;
+    gap: 15px;
+    text-align: center;
   }
 
   header h1 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     max-width: 90vw;
   }
 
-  .Logo img {
-    height: 50px;
-  }
-
-  .INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho {
-    flex-direction: column;
-    max-width: 95%;
-    margin: 15px auto;
-    padding: 8px;
-    gap: 8px;
+  .Logo {
+    justify-content: center;
   }
 
   nav ul {
     flex-direction: column;
-    width: 100%;
-  }
-
-  nav ul li a {
-    font-size: 1.1em;
-    padding: 8px 12px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .acessibilidade {
-    flex-direction: row;
+    align-items: center;
     gap: 10px;
-    justify-content: center;
   }
 
-  .acessibilidade p {
-    font-size: 6px;
-  }
-}
-
-/* Responsivo para celulares */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.3em;
-    max-width: 90vw;
+  nav ul li {
+    margin: 6px 0;
   }
 
-  .Logo img {
-    height: 40px;
+  .menu {
+    width: 90vw;
+    padding: 10px;
   }
 
   .INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho {
-    padding: 5px;
+    flex-direction: column;
+    max-width: 95vw;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p {
+    font-size: 0.9em;
+  }
+
+  .acessibilidade {
     max-width: 100%;
-    box-shadow: none;
-    border: 2px solid #265326;
+    padding: 10px 0;
+  }
+}
+
+/* Para telas pequenas (até 480px, celulares em modo retrato) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2em;
   }
 
-  nav ul li a {
-    font-size: 1em;
-    padding: 6px 8px;
-  }
-
-  .acessibilidade p {
-    font-size: 5px;
+  .Logo img {
+    height: 45px;
   }
 
   .botao {
-    font-size: 13px;
+    font-size: 12px;
     padding: 8px 10px;
+  }
+
+  .menu {
+    width: 95vw;
+    padding: 8px;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
+    padding: 6px 8px;
+  }
+
+  .INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p {
+    font-size: 0.85em;
+  }
+
+  .acessibilidade p {
+    font-size: 4px;
   }
 }
