@@ -191,22 +191,23 @@ cursor: pointer;
 }
 
 
-/* Estilo do modo contraste */
+  .contraste-ativo {
+    background-color: black !important;
+    color: rgb(251, 255, 0) !important;
+  }
 
-.contraste-ativo {
-  background-color: #000 !important;
-  color: #fff !important;
+  .contraste-ativo button {
+    background-color: #1d1919 !important;
+    color: rgb(238, 255, 0) !important;
+  }
+
+  .contraste-ativo a, 
+.contraste-ativo span{
+  color: rgb(251, 255, 0) !important;
 }
-
-
-.contraste-ativo * {
-  filter: invert(100%) hue-rotate(180deg);
+.contraste-ativo h1, .contraste-ativo h2, .contraste-ativo h3, .contraste-ativo p{
+  color: rgb(255, 255, 255);
 }
-
-.contraste-ativo img {
-  filter: invert(100%) hue-rotate(180deg); 
-}
-
 
 
 nav ul {
@@ -269,4 +270,92 @@ nav ul li a:hover {
 .INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p {
   margin: 0;
   padding: 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    height: auto;
+    padding: 15px 10px;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+    max-width: 90vw;
+  }
+
+  .Logo img {
+    height: 50px;
+  }
+
+  .INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho {
+    flex-direction: column;
+    max-width: 95%;
+    margin: 15px auto;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 1.1em;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .acessibilidade {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .acessibilidade p {
+    font-size: 6px;
+  }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.3em;
+    max-width: 90vw;
+  }
+
+  .Logo img {
+    height: 40px;
+  }
+
+  .INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho {
+    padding: 5px;
+    max-width: 100%;
+    box-shadow: none;
+    border: 2px solid #265326;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+    padding: 6px 8px;
+  }
+
+  .acessibilidade p {
+    font-size: 5px;
+  }
+
+  .botao {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
 }

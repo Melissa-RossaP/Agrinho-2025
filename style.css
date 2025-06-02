@@ -194,6 +194,15 @@ cursor: pointer;
     color: rgb(238, 255, 0) !important;
   }
 
+  .contraste-ativo a, 
+.contraste-ativo span{
+  color: rgb(251, 255, 0) !important;
+}
+.contraste-ativo h1, .contraste-ativo h2, .contraste-ativo h3, .contraste-ativo p{
+  color: rgb(255, 255, 255);
+}
+
+
 
 nav ul {
     list-style-type: none; /* Remove os marcadores da lista */
