@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const gabarito = {
     q1: 'b',
@@ -119,19 +122,69 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.getElementById('linkContato').addEventListener('click', function(event) {
-  event.preventDefault(); // para não pular direto
-  
-  // pega o elemento destino
-  const contato = document.getElementById('contato');
-  
-  // se existir, faz o scroll suave
-  if (contato) {
-    contato.scrollIntoView({ behavior: 'smooth', block: 'start' });
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('btn-acessibilidade');
+  const menu = document.getElementById('menu-acessibilidade');
+  const header = document.querySelector('header');
+
+  if (btn && menu && header) {
+    btn.addEventListener('click', () => {
+      const ativo = menu.classList.toggle('ativo');
+      if (ativo) {
+        header.classList.add('menu-aberto');
+      } else {
+        header.classList.remove('menu-aberto');
+      }
+    });
   }
+
+  document.getElementById('linkContato')?.addEventListener('click', function(event) {
+    event.preventDefault();
+    const contato = document.getElementById('contato');
+    if (contato) {
+      contato.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  setTimeout(() => {
+    document.getElementById('splash-screen')?.classList.add('fade-out');
+    document.getElementById('main-content')?.classList.add('visible');
+  }, 4000);
 });
 
- setTimeout(() => {
-    document.getElementById("splash-screen").classList.add("fade-out");
-    document.getElementById("main-content").classList.add("visible");
-  }, 4000); // 4 segundos
+
+  function toggleMenu() {
+  const menu = document.getElementById('menuAcessibilidade');
+  menu.classList.toggle('ativo');
+}
+
+
+let tamanhoFonteAtual = 1;
+
+function aumentarFonte() {
+  if (tamanhoFonteAtual < 2) {
+    tamanhoFonteAtual += 0.1;
+    document.body.style.fontSize = tamanhoFonteAtual + 'em';
+  }
+}
+
+function diminuirFonte() {
+  if (tamanhoFonteAtual > 0.5) {
+    tamanhoFonteAtual -= 0.1;
+    document.body.style.fontSize = tamanhoFonteAtual + 'em';
+  }
+}
+
+function contraste() {
+  document.body.classList.toggle('contraste-ativo');
+}
+
+function lerTexto() {
+  speechSynthesis.cancel();
+  const texto = document.body.innerText;
+  const utterance = new SpeechSynthesisUtterance(texto);
+  utterance.lang = 'pt-BR';
+  utterance.rate = 1;
+  speechSynthesis.speak(utterance);
+}
+

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sobre.css">
+   <link rel="stylesheet" href="sobre.css">
+    <script src="sobre.js"></script>
      <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
     <title>Sobre:</title>
 </head>
@@ -15,6 +16,40 @@
       <img src="img/Logo.png" alt="BeeHappy logo">
       </a>
       </div>
+
+
+      <div class="acessibilidade">
+  <button onclick="toggleMenu()" aria-label="Acessibilidade" class="abnace">
+    <img src="img/acessibilidade.png" alt="Ícone de acessibilidade">
+  </button>
+  <p class="creditos">
+    <a href="https://www.flaticon.com/br/icones-gratis/acessibilidade" title="acessibilidade ícones" target="_blank" rel="noopener">
+      Acessibilidade ícones<br> criados por Stockio - Flaticon
+    </a>
+  </p>
+
+  <div id="menuAcessibilidade" class="menu">
+    <button onclick="aumentarFonte()" class="botao">A+</button>
+    <button onclick="diminuirFonte()" class="botao">A-</button>
+    <button onclick="contraste()" class="botao">Contraste</button>
+    <button onclick="lerTexto()" class="botao">🔊 Ler</button>
+  </div>
+</div>
+
+    
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+
 
         <h1>
             Ruralidades Urbanas: Sobre

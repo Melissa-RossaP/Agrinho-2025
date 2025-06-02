@@ -1,103 +1,259 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0px;
     background-color: #dcf5c0;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    
 }
 
+/* Fazendo o header */
 header {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    width: 100%; 
-    height: 20vh; 
-    padding: 0 20px; 
-    background-color: rgb(128, 187, 112); 
-    color: rgb(24, 66, 12); 
-    box-sizing: border-box; 
-    gap: 400px; 
-    border: 3px solid rgb(74, 141, 67); 
-    overflow: hidden; 
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    padding: 0 20px;
+    background-color: rgb(128, 187, 112);
+    color: rgb(24, 66, 12);
+    box-sizing: border-box;
+    gap: clamp(1rem, 10vw, 4rem); 
+    border: 3px solid rgb(74, 141, 67);
+    position: relative; 
+}
 
-
- header h1 {
+header h1 {
   font-family: 'Times New Roman', Times, serif;
   font-size: clamp(1.5em, 5vw, 2.5em); 
   margin: 0 auto;
   text-align: center;
   word-wrap: break-word;
-  max-width: calc(100% - 40px);
+  max-width: 50vw; /* removido duplicação */
+  overflow: hidden; 
 }
 
+header.menu-aberto {
+  height: 30vh;
+}
 
-.Logo{
-   display: flex;
+/* Ajusta o tamanho em telas médias */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+}
+
+/* Ajusta ainda mais em telas pequenas */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+}
+  
+.Logo {
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   height: 100%;
   transition: transform 0.3s ease;
 }
 
-.Logo:hover{
-transform: scale(1.2);
-cursor: pointer;
+.Logo:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
-.Logo img{
-  height: 80px;
+.Logo img {
+  height: 60px;
   border-radius: 50%;
   border: 1px solid rgb(52, 78, 50);
 }
 
-  nav ul {
-    list-style-type: none; /* Remove os marcadores da lista */
-    display: flex; /* Alinha os itens em linha */
-    flex-direction: column; /*coluna */
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin-bottom: 10px; /* Espaço entre os itens */
-  }
-  
-  nav ul li a {
-    display: inline-block; 
-    color: rgb(29, 75, 25); /* Cor do texto */
-    text-decoration: none;
-    font-size: 1em;
-    padding: 3px 6px; 
-    background-color: rgb(81, 156, 74); 
-    border: 2.5px solid rgb(74, 141, 67); 
-    border-radius: 5px; /* Bordas meio redonda  */
-    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+.acessibilidade {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.acessibilidade p {
+  margin: 4px 0 0 0;
+  font-size: 5px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.creditos {
+  font-size: 10px;
+  margin-top: 6px;
+  max-width: 120px;
+  line-height: 1.2;
+}
+
+.creditos a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.acessibilidade button {
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.abnace {
+   all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent !important;
+  transition: transform 0.3s ease;
+  max-width: 120px;
+  text-align: center;
+}
+
+.abnace button{
+    background-color:transparent;
+}
+
+.abnace:hover{
+transform: scale(1.2);
+cursor: pointer;
+}
+.abnace img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgb(52, 78, 50);
+  border: 1px solid rgb(31, 77, 37);
+  border-radius: 100%;
+}
+
+
+.menu {
+  margin-top: 30px;
+  display: none;
+  position: absolute;
+  background-color: #f0fff0;
+  border: 2px solid #2d551d;
+  padding: 10px;
+  border-radius: 12px;
+  z-index: 1000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  width: max-content;
+}
+
+.menu.ativo {
+  display: block;
+}
+
+.botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(45, 94, 45); 
+  color: white;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.botao:hover {
+  background-color: rgb(34, 72, 34); 
+}
+
+.botao img {
+  margin-right: 6px;
+  width: 18px;
+  height: 18px;
+}
+
+.acessibilidade p {
+  margin-top: 6px;
+  font-size: 5px;
+  line-height: 1.4;
+  text-align: center;
+  color: #333;
+}
+
+
+/* Estilo do modo contraste */
+
+.contraste-ativo {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+
+.contraste-ativo * {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+.contraste-ativo img {
+  filter: invert(100%) hue-rotate(180deg); 
+}
+
+
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  position: relative; /* para o menu absoluto funcionar melhor */
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: rgb(29, 75, 25);
+  text-decoration: none;
+  font-size: 1em;
+  padding: 3px 6px;
+  background-color: rgb(81, 156, 74);
+  border: 2.5px solid rgb(74, 141, 67);
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: rgb(58, 119, 51);
-    border-color: rgb(52, 78, 50);
-    color: rgb(21, 51, 12);
-    transform: scale(1.2);
-    cursor: pointer;
+  background-color: rgb(58, 119, 51);
+  border-color: rgb(52, 78, 50);
+  color: rgb(21, 51, 12);
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .titulo-principal {
   text-align: center;
-  color: #16380e;        /* verde escuro, combinando com seu tema */
-  font-size: 2.2em;      /* tamanho grande para destaque */
-  margin: 30px 0 20px 0; /* espaço acima e abaixo */
+  color: #16380e;
+  font-size: 2.2em;
+  margin: 30px 0 20px 0;
   font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-.INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho{
-display: flex;
+.INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho {
+  display: flex;
   gap: 10px;
   max-width: 700px;
   margin: 20px auto;
@@ -110,7 +266,7 @@ display: flex;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-.INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p{
+.INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p {
   margin: 0;
   padding: 0;
 }

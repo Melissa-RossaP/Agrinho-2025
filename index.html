@@ -22,14 +22,44 @@
   </div>
 </div>
 
-
       <div class="Logo">
       <a href="https://ruralidades-urbanas.vercel.app/">
       <img src="img/Logo.png" alt="BeeHappy logo">
       </a>
       </div>
 
+
+<div class="acessibilidade">
+  <button onclick="toggleMenu()" aria-label="Acessibilidade" class="abnace">
+    <img src="img/acessibilidade.png" alt="Ícone de acessibilidade">
+  </button>
+  <p class="creditos">
+    <a href="https://www.flaticon.com/br/icones-gratis/acessibilidade" title="acessibilidade ícones" target="_blank" rel="noopener">
+      Acessibilidade ícones<br> criados por Stockio - Flaticon
+    </a>
+  </p>
+
+  <div id="menuAcessibilidade" class="menu">
+    <button onclick="aumentarFonte()" class="botao">A+</button>
+    <button onclick="diminuirFonte()" class="botao">A-</button>
+    <button onclick="contraste()" class="botao">Contraste</button>
+    <button onclick="lerTexto()" class="botao">🔊 Ler</button>
+  </div>
+</div>
+
+    
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+
         <h1>Ruralidades Urbanas</h1>
+
+
+
 
         <nav> <!--Nav define a área de navegação de um site, da para colocar links que direcionam para outras partes-->
             <ul>
@@ -38,9 +68,17 @@
             </ul><!--O UL agrupa a lista, e cada item de lista é representado pela tag LI-->
           </nav>
 
+          
 
     </header>
-    
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+
+
 <div class="Meio"> 
     <main>
        
@@ -168,11 +206,10 @@ A agricultura possui uma importância vital para o bem-estar da sociedade e para
         Texto autoral feito por Melissa Rossa Pereira, baseado nas informações dos sites: Mundo Educação, Brasil Escola e CropLife Brasil.
   </p>
   <div class="comdes">
-  <a href="https://commons.wikimedia.org/wiki/File:Ansel_Adams_-_Farm_workers_and_Mt._Williamson.jpg">
     <img src="img/AgroExte.jpg" alt="Agricultura Extensiva Wiki Commons" srcset="">
   </a>
    <p>
-    Atribuição: <br> Ansel Adams, Public domain, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>,<br> via Wikimedia Commons.
+    Atribuição: Foto autoral tirada por Melissa Rossa Pereira.
   </p>
   </div>
 </div>
