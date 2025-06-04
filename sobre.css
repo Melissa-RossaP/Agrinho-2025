@@ -357,6 +357,8 @@ nav ul li a:hover {
   font-size: 1.2em;
 }
 
+
+
 .Rolando {
   width: 800px;
   overflow: hidden;
@@ -365,31 +367,32 @@ nav ul li a:hover {
   border-radius: 6px;
   background-color: #c3ddbb;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
-
 }
 
-.Rolando p{
+.Rolando p {
   font-size: 0.8em;
   text-align: center;
   color: #0b3006;
 }
 
-
 .Fotos {
   display: flex;
   width: max-content;
+  will-change: transform;
 }
 
-.Fotos img{
-  width: calc(1000px / 4); 
+.Fotos img {
+  width: calc(1000px / 4);
   flex-shrink: 0;
   object-fit: cover;
-  border: 3px solid #265326;  
-  margin-right: 20px;           
-  border-radius: 6px;          
+  border: 3px solid #265326;
+  margin-right: 20px;
+  border-radius: 6px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+
 
 
 .FooterCon {
@@ -632,6 +635,67 @@ h2, h3 {
 
   .Rolandinho{
     flex-direction: column;
+    width: 30%;
+    max-width: 30%;
+    padding: 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    align-self: center;
+  }
+}
+
+
+@media (max-width: 1024px), (max-width: 480px){
+
+
+
+  .Rolando {
+    width: 90%;
+    max-width: 250px;
+    margin: 5px auto;
+    overflow: hidden;
+  }
+
+  .Fotos {
+    display: flex;
+    width: 300%; 
+  }
+
+.Fotos img {
+  width: calc(33.33% - 4px);  
+  margin-right: 4px;           
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 15px;
+  border: none;
+}
+
+.Fotos img:last-child {
+  margin-right: 0;
+}
+}
+
+@media (max-width: 1024px), (max-width: 768px), (max-width: 480px){
+
+
+    .PRINCIPAL{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+ .PRINCIPAL{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+.Reserva, .AGRINHO, .Brasil, .INICIO, .AGROHIST, .Sitezinho, .Final,.Rolandinho{
+  flex-direction: column;
     width: 60%;
     max-width: 60%;
     padding: 20px;
@@ -640,5 +704,6 @@ h2, h3 {
     word-break: break-word;
     overflow-wrap: break-word;
     align-self: center;
-  }
+}
+
 }

@@ -55,24 +55,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('load', () => {
   const track = document.querySelector('.Fotos');
-  const speed = 1;
+  const imgs = track.querySelectorAll('img');
+  const totalImgs = imgs.length;
 
-
+  // Duplica o conteúdo para rolagem infinita
   track.innerHTML += track.innerHTML;
 
   let position = 0;
+  let speed;
+
+  function setSpeed() {
+    if (window.innerWidth <= 768) {
+      speed = 1;  
+    } else {
+      speed = 1.5;  // 
+    }
+  }
+
+  setSpeed();
 
   function animate() {
     position -= speed;
 
-
+  
     if (position <= -track.scrollWidth / 2) {
       position = 0;
     }
 
     track.style.transform = `translateX(${position}px)`;
+
     requestAnimationFrame(animate);
   }
 
   animate();
+
+  window.addEventListener('resize', () => {
+    setSpeed();
+  });
 });
