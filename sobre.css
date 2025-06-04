@@ -1,68 +1,58 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0px;
     background-color: #dcf5c0;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    text-align: justify;
 }
 
-/* Fazendo o header */
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 20vh;
-    padding: 0 20px;
-    background-color: rgb(128, 187, 112);
-    color: rgb(24, 66, 12);
-    box-sizing: border-box;
-    gap: clamp(1rem, 10vw, 4rem); 
-    border: 3px solid rgb(74, 141, 67);
-    position: relative; 
-     overflow:visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  box-sizing: border-box;
+  padding: 0 20px;
+  gap: clamp(1rem, 10vw, 4rem); 
+  background-color: rgb(128, 187, 112);
+  color: rgb(24, 66, 12);
+  border: 3px solid rgb(74, 141, 67);
+  position: relative;
 }
 
-header h1 {
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    gap: 0.5rem;
+  }
+
+  header h1 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+ header h1 {
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(1.4em, 4vw, 2.4em); 
+  font-size: clamp(1.5em, 5vw, 2.5em); 
   margin: 0 auto;
   text-align: center;
   word-wrap: break-word;
+  max-width: calc(100% - 40px);
+   overflow: hidden; 
   max-width: 50vw; 
-  overflow: hidden; 
+  text-align: justify;
 }
 
 header.menu-aberto {
   height: 30vh;
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto; 
-    min-height: 25vh; 
-    width: 100%;
-    padding: 20px 10px;
-    text-align: center;
-    gap: 15px;
 
-  }
-
-  header h1 {
-    font-size: 1.4em;
-    max-width: 90%;
-    word-wrap: break-word;
-  }
-
-  .Logo img {
-    max-height: 60px;
-  }
-}
-  
 .Logo{
   display: flex;
   align-items: center;
@@ -77,8 +67,8 @@ cursor: pointer;
 }
 
 .Logo img{
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   border: 3px solid rgb(12, 51, 9);
 }
@@ -216,7 +206,7 @@ cursor: pointer;
 .contraste-ativo span{
   color: rgb(251, 255, 0) !important;
 }
-.contraste-ativo h1, .contraste-ativo h2, .contraste-ativo h3, .contraste-ativo p{
+.contraste-ativo h1{
   color: rgb(255, 255, 255);
 }
 
@@ -264,10 +254,10 @@ nav ul li a:hover {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
-.INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho {
+.INICIO, .AGROHIST, .Sitezinho, .Final {
   display: flex;
   gap: 10px;
-  max-width: 700px;
+  max-width: 800px;
   margin: 20px auto;
   padding: 10px;
   background-color: #92c08b;
@@ -276,143 +266,379 @@ nav ul li a:hover {
   color: #0b3006;
   align-items: flex-start;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
 }
 
-.INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p {
+.INICIO p,.AGROHIST p, .Sitezinho p, .Final p {
   margin: 0;
   padding: 0;
+  font-size: 1.2em;
 }
 
+.INICIO:hover, .AGROHIST:hover, .Sitezinho:hover, .Final:hover{
+ transform: scale(1.03);
+  cursor: pointer;
+}
 
+.Reserva, .AGRINHO, .Brasil {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 15px;
+  background-color: #92c08b;
+  border: 3px solid #265326;
+  border-radius: 10px;
+  color: #0b3006;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  text-align: justify;
+  align-items: center;
+}
 
+.Reserva:hover, .AGRINHO:hover, .Brasil:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
 
-/* Justifica todos os textos principais */
-body, p, .INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p {
+.Reserva p, .AGRINHO p, .Brasil p {
+  font-size: 1.2em;
+  margin: 0;
+  color: #0b3006;
   text-align: justify;
 }
 
-/* Para telas menores que 768px (tablets, celulares em modo paisagem) */
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-    line-height: 1.4;
-  }
+.AGRINHO img, .Brasil img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
 
+.Reserva img{
+  width: 180px;
+  max-width: 250px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.Reserva a, .AGRINHO a, .Brasil a {
+  text-decoration: none;
+  border: none;
+  font-size: 0.9em;
+  margin: 0;
+  color: #0b3006;
+}
+
+.Reserva .comdes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Rolandinho {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 15px;
+  background-color: #92c08b;
+  border: 3px solid #265326;
+  border-radius: 10px;
+  color: #0b3006;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  text-align: justify;
+  align-items: center;
+}
+
+.Rolandinho h2{
+  font-size: 1.2em;
+}
+
+.Rolando {
+  width: 800px;
+  overflow: hidden;
+  margin: 60px auto;
+  border: 3px solid #276d1e;
+  border-radius: 6px;
+  background-color: #c3ddbb;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+.Rolando p{
+  font-size: 0.8em;
+  text-align: center;
+  color: #0b3006;
+}
+
+
+.Fotos {
+  display: flex;
+  width: max-content;
+}
+
+.Fotos img{
+  width: calc(1000px / 4); 
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 3px solid #265326;  
+  margin-right: 20px;           
+  border-radius: 6px;          
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.FooterCon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Alinha os conteúdos ao topo com espaço */
+  width: 100%;
+  min-height: 10px;
+  padding: 10px 10px; /* Aumentado o padding vertical */
+  background-color: rgb(128, 187, 112);
+  color: rgb(24, 66, 12);
+  box-sizing: border-box;
+  gap: 30px;
+  border: 3px solid rgb(74, 141, 67);
+  text-align: center;
+}
+
+.contatos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.contato-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.contato-item:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+.contatos a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contatos a img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
+  cursor: pointer;
+}
+
+.contatos a:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+}
+
+.atributo {
+  margin-top: 2px;
+  font-size: 8px;
+  line-height: 1.1;
+  margin-top: 3px;
+  text-align: center;
+  max-width: 70px;
+  opacity: 0.5;
+  user-select: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.atributo a {
+  color: rgb(24, 66, 12);
+  text-decoration: none;
+}
+
+
+.Ops {
+  font-size: 15px;
+  font-style: italic;
+  color: rgb(24, 66, 12);
+  width: 100%;
+  margin-top: 0px;
+  user-select: none;
+}
+
+
+
+#btnTopo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid rgb(37, 77, 33);
+  border-radius: 100%;
+  background-color: #91db7a;
+  color: #11380a;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#btnTopo:hover {
+  background-color: #66bd63;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
   header {
     flex-direction: column;
     height: auto;
-    padding: 10px 5px;
-    gap: 15px;
+    padding: 10px;
     text-align: center;
+    gap: 20px;
   }
 
   header h1 {
-    font-size: 1.5em;
-    max-width: 90vw;
+    font-size: 1em;
+  }
+nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+h2, h3 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
   }
 
-  .Logo {
-    justify-content: center;
+  .Logo img {
+    max-height: 7vh;
   }
+}
 
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-
-  nav ul li {
-    margin: 6px 0;
-  }
-
-  .menu {
-    width: 90vw;
-    padding: 10px;
-  }
-
-  .INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho {
-    flex-direction: column;
-    max-width: 95vw;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p {
-    font-size: 0.9em;
-  }
-
-  .acessibilidade {
-    max-width: 100%;
-    padding: 10px 0;
+}
+@media (min-width: 769px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
   }
 }
 
-/* Para telas pequenas (até 480px, celulares em modo retrato) */
+/* Ajusta o tamanho em telas médias */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+}
+
+/* Ajusta ainda mais em telas pequenas */
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.2em;
-  }
-
-  .Logo img {
-    height: 45px;
-  }
-
-  .botao {
-    font-size: 12px;
-    padding: 8px 10px;
-  }
-
-  .menu {
-    width: 95vw;
-    padding: 8px;
-  }
-
-  nav ul li a {
-    font-size: 0.9em;
-    padding: 6px 8px;
-  }
-
-  .INICIO, .AGRINHO, .AGROHIST, .Brasil, .Sitezinho {
-    max-width: 100%;
-    padding: 8px;
-  }
-
-  .INICIO p, .AGRINHO p, .AGROHIST p, .Brasil p, .Sitezinho p {
-    font-size: 0.85em;
-  }
-
-  .acessibilidade p {
-    font-size: 4px;
+    font-size: 1.5em;
   }
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto; /* Permite que cresça com o conteúdo */
-    min-height: 30vh; /* Garante altura mínima mais confortável */
-    width: 100%;
-    padding: 20px 10px;
-    text-align: center;
-    gap: 15px;
+@media (max-width: 768px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     box-sizing: border-box;
   }
 
-  header h1 {
-    font-size: 1.6em;
-    max-width: 90%;
-    word-wrap: break-word;
-    margin: 0;
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
-  .Logo {
-    justify-content: center;
+  .titulo-principal {
+    font-size: 1em;
+    text-align: center;
+    word-break: break-word;
+    padding: 0 10px;
   }
 
-  .Logo img {
-    height: 50px;
+  .INICIO, .AGROHIST, .Sitezinho, .Final {
+    flex-direction: column;
+    width: 60%;
+    max-width: 60%;
+    padding: 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    align-self: center;
   }
+
+  .INICIO p,
+  .AGROHIST p,
+  .Sitezinho p,
+  .Final p {
+    font-size: 1em;
+    line-height: 1.5em;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .Reserva p, .AGRINHO p, .Brasil p {
+  font-size: 1em;
+    line-height: 1.5em;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
+  .Reserva, .AGRINHO, .Brasil {
+    flex-direction: column;
+    width: 60%;
+    max-width: 60%;
+    padding: 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    align-self: center;
+  }
+
+  .Rolandinho{
+    flex-direction: column;
+    width: 60%;
+    max-width: 60%;
+    padding: 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    align-self: center;
+  }
+}

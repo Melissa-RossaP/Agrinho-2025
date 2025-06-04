@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;700&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0px;
     background-color: #dcf5c0;
@@ -12,6 +12,8 @@ body {
     text-align: justify;
     
 }
+
+
 
 .Meio{
   padding: 30px;
@@ -48,10 +50,9 @@ header {
   
  header h1 {
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(1.4em, 4vw, 2.4em); 
+  font-size: clamp(1.4em, 4vw, 2em); 
   margin: 0 auto;
   text-align: center;
-  word-wrap: break-word;
   max-width: calc(100% - 40px);
    overflow: hidden; 
   max-width: 50vw; 
@@ -62,19 +63,7 @@ header.menu-aberto {
   height: 30vh;
 }
 
-/* Ajusta o tamanho em telas médias */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2em;
-  }
-}
 
-/* Ajusta ainda mais em telas pequenas */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5em;
-  }
-}
   
 .Logo{
   display: flex;
@@ -152,7 +141,6 @@ cursor: pointer;
 transform: scale(1.2);
 cursor: pointer;
 }
-
 .abnace img {
   width: 30px;
   height: 30px;
@@ -162,15 +150,18 @@ cursor: pointer;
   border-radius: 100%;
 }
 
+
 .menu {
   margin-top: 30px;
   display: none;
   position: absolute;
   background-color: #f0fff0;
-  border: 1px solid #2d551d;
-  padding: 8px;
-  border-radius: 6px;
+  border: 2px solid #2d551d;
+  padding: 10px;
+  border-radius: 12px;
   z-index: 1000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  width: max-content;
 }
 
 .menu.ativo {
@@ -178,15 +169,40 @@ cursor: pointer;
 }
 
 .botao {
-  display: block;
-  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(45, 94, 45); 
+  color: white;
   width: 100%;
-  background-color:rgb(100, 156, 100)
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.botao:hover{
-    background-color:rgb(45, 94, 45)
+.botao:hover {
+  background-color: rgb(34, 72, 34); 
 }
+
+.botao img {
+  margin-right: 6px;
+  width: 18px;
+  height: 18px;
+}
+
+.acessibilidade p {
+  margin-top: 6px;
+  font-size: 5px;
+  line-height: 1.4;
+  text-align: center;
+  color: #333;
+}
+
 
   .contraste-ativo {
     background-color: black !important;
@@ -205,7 +221,6 @@ cursor: pointer;
 .contraste-ativo h1, .contraste-ativo h2, .contraste-ativo h3, .contraste-ativo p{
   color: rgb(255, 255, 255);
 }
-
 
 
 nav ul {
@@ -387,7 +402,6 @@ a {
   animation-delay: 1s;
 }
 
-/* Keyframes para o efeito de entrada */
 @keyframes fadeZoomIn {
   0% {
     opacity: 0;
@@ -433,6 +447,7 @@ a {
   font-size: 1em; 
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
    padding: 20px;
+   text-align: justify;
 }
 
 .Agro p{
@@ -475,8 +490,6 @@ a {
   text-align: justify;
 }
 
-
-.AgroEx h2,
 .AgroEx h3 {
   margin: 0;
   max-width: 500px;
@@ -486,7 +499,6 @@ a {
 .AgroEx h2 {
   font-size: 2em;
   color: #143d14;
-  text-align: justify;
 }
 
 .AgroEx {
@@ -516,7 +528,7 @@ a {
   font-size: 2em;
   margin-bottom: 10px;
   color: #143d14;
-  text-align: justify;
+
 }
 
 .AgroEx h3 {
@@ -588,8 +600,9 @@ a {
   background-color: #92c08b; 
   border: 3px solid #265326; 
   border-radius: 10px;
-  color: #0b3006; /* verde escuro para texto */
+  color: #0b3006;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+  text-align: justify;
 
 }
 
@@ -1251,5 +1264,19 @@ button:hover {
     font-size: 2em;
     letter-spacing: 0.5px;
     text-shadow: 0 0 8px #79d997;
+  }
+}
+
+/* Ajusta o tamanho em telas médias */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+}
+
+/* Ajusta ainda mais em telas pequenas */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
   }
 }

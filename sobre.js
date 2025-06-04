@@ -32,3 +32,47 @@ function lerTexto() {
   utterance.rate = 1;
   speechSynthesis.speak(utterance);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btnTopo = document.getElementById('btnTopo');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      btnTopo.style.display = 'block';
+    } else {
+      btnTopo.style.display = 'none';
+    }
+  });
+
+  btnTopo.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
+
+
+window.addEventListener('load', () => {
+  const track = document.querySelector('.Fotos');
+  const speed = 1;
+
+
+  track.innerHTML += track.innerHTML;
+
+  let position = 0;
+
+  function animate() {
+    position -= speed;
+
+
+    if (position <= -track.scrollWidth / 2) {
+      position = 0;
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+});
