@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
   const imgs = track.querySelectorAll('img');
   const totalImgs = imgs.length;
 
-  
+  // Duplica o conteúdo para rolagem infinita
   track.innerHTML += track.innerHTML;
 
   let position = 0;
@@ -94,8 +94,3 @@ window.addEventListener('load', () => {
   });
 });
 
-  setTimeout(() => {
-    document.getElementById('splash-screen')?.classList.add('fade-out');
-    document.getElementById('main-content')?.classList.add('visible');
-  }, 4000);
-;
