@@ -1,11 +1,4 @@
 
-  setTimeout(() => {
-    document.getElementById('splash-screen')?.classList.add('fade-out');
-    document.getElementById('main-content')?.classList.add('visible');
-  }, 4000);
-
-
-
   function toggleMenu() {
   const menu = document.getElementById('menuAcessibilidade');
   menu.classList.toggle('ativo');
@@ -101,4 +94,4 @@ window.addEventListener('load', () => {
 
   window.addEventListener('resize', () => {
     setSpeed();
-  })
+  });
