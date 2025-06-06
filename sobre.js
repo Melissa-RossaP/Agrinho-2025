@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-window.addEventListener('load', () => {
+window.addEventListener ('load', () => {
   const track = document.querySelector('.Fotos');
   const imgs = track.querySelectorAll('img');
   const totalImgs = imgs.length;
@@ -94,5 +94,4 @@ window.addEventListener('load', () => {
 
   window.addEventListener('resize', () => {
     setSpeed();
-  })
-  
+  });
