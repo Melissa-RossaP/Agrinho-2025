@@ -1,5 +1,4 @@
-
-   function toggleMenu() {
+function toggleMenu() {
   const menu = document.getElementById('menuAcessibilidade');
   menu.classList.toggle('ativo');
 }
@@ -34,7 +33,6 @@ function lerTexto() {
   speechSynthesis.speak(utterance);
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const btnTopo = document.getElementById('btnTopo');
 
@@ -55,12 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-window.addEventListener ('load', () => {
+window.addEventListener('load', () => {
   const track = document.querySelector('.Fotos');
   const imgs = track.querySelectorAll('img');
   const totalImgs = imgs.length;
 
-
+  // Duplica o conteúdo para rolagem infinita
   track.innerHTML += track.innerHTML;
 
   let position = 0;
@@ -73,7 +71,6 @@ window.addEventListener ('load', () => {
       speed = 1.5;  // 
     }
   }
-}
 
   setSpeed();
 
@@ -85,7 +82,7 @@ window.addEventListener ('load', () => {
       position = 0;
     }
 
-  track.style.transform = `translateX(${position}px)`;
+    track.style.transform = `translateX(${position}px)`;
 
     requestAnimationFrame(animate);
   }
@@ -95,3 +92,4 @@ window.addEventListener ('load', () => {
   window.addEventListener('resize', () => {
     setSpeed();
   });
+});

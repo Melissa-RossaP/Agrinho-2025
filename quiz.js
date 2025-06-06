@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     this.textContent = "Corrigir";
     document.getElementById("verRespostasBtn").style.display = "inline-block";
 
+    // Sempre que corrigir, esconder as respostas para resetar o estado
     respostasVisiveis = false;
     document.getElementById("respostas").style.display = "none";
     document.getElementById("respostas").innerHTML = "";
@@ -66,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const respostasDiv = document.getElementById("respostas");
 
     if (!respostasVisiveis) {
-      
+      // Mostrar respostas
       const respostas = [
         "1) Produzir alimentos (b)",
         "2) Substâncias usadas para combater pragas (c)",
@@ -78,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "8) Rotação de culturas (b)"
       ];
 
-      respostasDiv.innerHTML = ""; 
+      respostasDiv.innerHTML = ""; // limpa
       respostas.forEach((resposta) => {
         const box = document.createElement("div");
         box.className = "resposta-box";
@@ -91,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       respostasVisiveis = true;
 
     } else {
-      
+      // Esconder respostas
       respostasDiv.style.display = "none";
       respostasDiv.innerHTML = "";
       this.textContent = "Ver respostas";

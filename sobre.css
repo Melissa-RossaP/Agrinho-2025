@@ -8,7 +8,6 @@ body {
     text-align: justify;
 }
 
-
 header {
   display: flex;
   justify-content: center;
@@ -210,6 +209,7 @@ cursor: pointer;
 .contraste-ativo h1{
   color: rgb(255, 255, 255);
 }
+
 
 nav ul {
   list-style-type: none;
