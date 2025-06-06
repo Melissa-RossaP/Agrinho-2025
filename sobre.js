@@ -5,6 +5,7 @@
   }, 4000);
 
 
+
   function toggleMenu() {
   const menu = document.getElementById('menuAcessibilidade');
   menu.classList.toggle('ativo');
@@ -79,6 +80,7 @@ window.addEventListener('load', () => {
       speed = 1.5;  // 
     }
   }
+}
 
   setSpeed();
 
