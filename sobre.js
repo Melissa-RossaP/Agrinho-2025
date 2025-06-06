@@ -1,5 +1,5 @@
 
-  function toggleMenu() {
+   function toggleMenu() {
   const menu = document.getElementById('menuAcessibilidade');
   menu.classList.toggle('ativo');
 }
