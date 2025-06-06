@@ -212,6 +212,23 @@ cursor: pointer;
 }
 
 
+#splash-screen {
+  font-family: 'Courier New', Courier, monospace;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #014421;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  color: #ffffff;
+  overflow: hidden;
+}
 
 .splash-text {
   text-align: center;
