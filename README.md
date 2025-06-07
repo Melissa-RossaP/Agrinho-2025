@@ -72,6 +72,7 @@ Google Fonts para fontes personalizadas
 • Opção de “Tentar novamente”
 
 **✨ Estilização com CSS3:**
+
 *No CSS, utilizei diversas técnicas para garantir um site bonito, funcional e responsivo:*
 
 • Reset de estilos para uniformizar o layout entre navegadores
