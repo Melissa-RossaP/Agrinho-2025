@@ -60,5 +60,9 @@ O plugin utilizado foi *retirado do projeto VLibras*, uma ferramenta oficial man
 
 *O conteúdo foi reescrito com minhas próprias palavras, com o objetivo de tornar o aprendizado mais acessível e educativo.*
 
+**🎨 Identidade Visual:**
 
+•Logo original desenhada e criada manualmente por mim, Melissa Rossa Pereira
+
+•Escolha cuidadosa de cores, fontes e imagens para transmitir o tema rural-urbano
 
