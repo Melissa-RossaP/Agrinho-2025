@@ -135,13 +135,49 @@ As imagens utilizadas no site foram retiradas de:
 *O conteúdo foi reescrito com minhas próprias palavras, com o objetivo de tornar o aprendizado mais acessível e educativo.*
 
 
-**Licença:**
+**✒️ Licença:**
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
 
 
- **Status do Projeto**
+ **📈 Reflexão sobre o aprendizado:**
+
+Neste projeto, enfrentei grandes desafios, especialmente na criação do design responsivo e na implementação da acessibilidade. Ajustar o site para funcionar bem em diferentes dispositivos e garantir o acesso para pessoas com deficiência exigiu muita dedicação, paciência e estudo. Também precisei entender melhor a integração entre HTML, CSS e JavaScript para criar funcionalidades interativas e responsivas. Implementar o plugin VLibras me ensinou muito sobre design acessível, ampliando o alcance do conteúdo.
+
+Esse projeto foi uma verdadeira jornada de aprendizado. Superar as dificuldades para deixar o site responsivo e acessível me mostrou que, assim como na agricultura, é preciso paciência, cuidado e dedicação para ver o crescimento acontecer. Hoje, tenho orgulho de apresentar um site que cultiva conhecimento e inclusão, conectando pessoas ao valor do campo de forma leve e verdadeira.
+
+
+**Este projeto foi desenvolvido principalmente por mim, Melissa Rossa Pereira.**
+
+**Se quiser sugerir melhorias ou relatar algum problema, fique à vontade para entrar em contato comigo pelas redes sociais disponíveis na seção de contato do site.**
+
+
+**📱 Contato:**
+
+📞 Número: [ +55 (42) 9 9910-6956 ](tel:+5542999106956)
+
+✉️ E-mail: [melissarossap@gmail.com](mailto:melissarossap@gmail.com)
+
+📸 Instagram: [m3l.r1](https://www.instagram.com/m3l.r1/)
+
+🔗 LinkedIn: [Melissa Rossa Pereira](https://www.linkedin.com/in/melissa-rossa-pereira-271486277/)
+
+
+**🪄Agradecimentos:**
+
+**Gostaria de agradecer a todas as pessoas e recursos que contribuíram para o desenvolvimento deste projeto:**
+
+A minha Professora e colegas que me incentivaram e deram suporte durante a criação do site.
+
+Aos tutoriais e vídeos do YouTube que me ajudaram a entender melhor HTML, CSS e JavaScript.
+
+Ao projeto VLibras, por disponibilizar o plugin de acessibilidade em Libras.
+
+Aos sites de referência, como Brasil Escola, CropLife Brasil e Wikipédia, que serviram como base para meu conteúdo.
+
+*Muito obrigada a todos!*
+
+*🌟 E para fechar com chave de ouro... Textos autorais por Melissa Rossa Pereira.*
+
+## 📌 Status do Projeto
  O site já esta concluído!
-
-
-
