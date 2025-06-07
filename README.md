@@ -126,7 +126,7 @@ As imagens utilizadas no site foram retiradas de:
 
 *O conteúdo foi reescrito com minhas próprias palavras, com o objetivo de tornar o aprendizado mais acessível e educativo.*
 
-## Licença
+# Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
 
