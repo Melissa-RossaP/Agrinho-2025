@@ -1,6 +1,6 @@
-# Agrinho-2025
+# Agrinho 2025 - Ruralidades Urbanas
 
-**Bem-vindo ao site Ruralidades Urbanas!** 
+**🌾 Bem-vindo ao site Ruralidades Urbanas!🌾** 
 
 Este projeto foi criado com o objetivo de ensinar de forma interativa sobre a *agricultura, sua história, tipos e práticas sustentáveis, e ainda por meio de um quiz online!*
 
@@ -12,13 +12,13 @@ Nosso objetivo é valorizar o campo, sua história, importância e as inovaçõe
 
 
 
-**Objetivo do Projeto:**
+**🎯 Objetivo do Projeto:**
 
 Este site tem como missão informar, inspirar e valorizar o papel do campo em nossas vidas. Mesmo morando em áreas urbanas, todos dependemos da agricultura para a alimentação, produtos e sustentabilidade. Através de um conteúdo educativo e interativo, quero contribuir para que mais pessoas entendam essa conexão fundamental entre campo e cidade.
 
 
 
-**Tecnologias Utilizadas:**
+**🛠 Tecnologias Utilizadas:**
 
 HTML5 para estruturar o conteúdo do site.
 
@@ -29,7 +29,7 @@ JavaScript para interatividade.
 Google Fonts para fontes personalizadas.
 
 
-**Créditos das Imagens**
+**🖼 Créditos das Imagens**
 
 As imagens utilizadas no site foram retiradas de:
 
@@ -39,14 +39,14 @@ Pixabay — imagens gratuitas e de uso livre.
 
 Fotos autorais por Melissa Rossa Pereira.
 
-**Acessibilidade:**
+**♿ Acessibilidade:**
 
 Para garantir maior inclusão e acessibilidade, o site conta com um plugin de Libras (Língua Brasileira de Sinais), que permite a tradução do conteúdo para Libras.
 
 O plugin utilizado foi *retirado do projeto VLibras*, uma ferramenta oficial mantida pelo governo brasileiro que facilita o acesso à informação para pessoas surdas.
 
 
-**Referências e Autoria:**
+**📚 Referências e Autoria:**
 
 *Todo o conteúdo textual deste site foi escrito por mim, Melissa Rossa Pereira, com base em pesquisas realizadas em fontes confiáveis. As informações foram retiradas e adaptadas a partir dos seguintes sites:*
 
