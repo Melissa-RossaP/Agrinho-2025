@@ -18,13 +18,21 @@ Através de um conteúdo educativo e interativo, quero contribuir para que mais 
 
 *🛠 Tecnologias Utilizadas:*
 
-Site desenvolvido com HTML, CSS e JavaScript
+Site desenvolvido no Visual Studio Code (VScode), utilizando HTML, CSS e JavaScript
 
 Código dividido em div's bem organizadas por seção, facilitando a estilização
 
+Vercel foi a plataforma para hospedagem e publicação do site online
+
 Design responsivo para telas grandes, médias e pequenas, usando @media queries
 
+O protótipo do site foi feito no Figma
+
+VLibras foi o plugin oficial para acessibilidade em Libras
+
 Google Fonts para fontes personalizadas
+
+
 
 *📋 Funcionalidades:*
 
@@ -126,7 +134,14 @@ As imagens utilizadas no site foram retiradas de:
 
 *O conteúdo foi reescrito com minhas próprias palavras, com o objetivo de tornar o aprendizado mais acessível e educativo.*
 
-# Licença
+
+**Licença:**
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
+
+
+ **Status do Projeto**
+ O site já esta concluído!
+
+
 
