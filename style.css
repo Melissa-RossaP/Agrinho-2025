@@ -28,7 +28,7 @@ body {
   padding-left: 60px;
   overflow: hidden;
   flex-direction: column;
- 
+  text-align: justify;
 }
 
 /* Fazendo o header */

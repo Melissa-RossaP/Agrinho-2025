@@ -3,6 +3,13 @@ function toggleMenu() {
   menu.classList.toggle('ativo');
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.getElementById('splash-screen')?.classList.add('fade-out');
+    document.querySelector('.PRINCIPAL')?.classList.add('visible');
+  }, 4000);
+});
+
 
 let tamanhoFonteAtual = 1;
 
