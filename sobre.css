@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;700&display=swap');
+
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0px;
     background-color: #dcf5c0;
     line-height: 1.6;
     align-items: center;
     text-align: justify;
+     text-justify: inter-word;
 }
 
 #splash-screen {

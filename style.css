@@ -271,6 +271,7 @@ nav ul li a:hover {
   margin: 20px auto; /* Centraliza horizontalmente na página */
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
   margin-bottom: 5%;
+  text-align: justify;
 }
 
 
@@ -499,7 +500,9 @@ a {
   color: #0b3006;
   align-items: flex-start;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
-  text-align: justify;
+text-align: justify;
+text-justify: inter-word;
+
 }
 
 .AgroEx h3 {
@@ -526,7 +529,8 @@ a {
   color: #0b3006;
   align-items: start;
   transition: transform 0.3s ease;
-  text-align: justify;
+ text-align: justify;
+text-justify: inter-word;
 }
 
 .AgroEx:hover {
@@ -597,6 +601,8 @@ a {
   color: #0b3006;
   align-items: start;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
+  text-align: justify;
+text-justify: inter-word;
 }
 
 .AgrinEX p{
@@ -615,6 +621,7 @@ a {
   color: #0b3006;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
   text-align: justify;
+text-justify: inter-word;
 
 }
 
@@ -642,7 +649,8 @@ a {
   margin: 20px auto;       
   padding: 20px;           
   overflow: hidden;
-  text-align: justify;      
+  text-align: justify;
+text-justify: inter-word;    
   color: #06300f;
   background-color: #99c299;
   border: 3px solid #153315;
@@ -762,6 +770,7 @@ a {
   color: #0b3006;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
   text-align: justify;
+text-justify: inter-word;
 }
 
 .Desafios p{
@@ -1146,38 +1155,38 @@ button:hover {
 /* Responsividade */
 @media (max-width: 768px) {
   .evento {
-    flex-direction: column; /* Coloca os itens em uma coluna em vez de uma linha */
-    align-items: center; /* Centraliza os itens */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .ano {
     margin-right: 0;
-    margin-bottom: 10px; /* Dá um espaço entre o ano e a descrição */
+    margin-bottom: 10px; 
   }
 
   .descricao {
-    width: 90%; /* Ajusta a largura da descrição para ocupar mais espaço */
+    width: 90%; 
   }
 }
 
 @media (max-width: 480px) {
   .Titu {
-    font-size: 1.5em; /* Diminui o tamanho do título em telas menores */
+    font-size: 1.5em; 
   }
 
   .ano {
-    font-size: 1.2em; /* Ajusta o tamanho da fonte do ano */
+    font-size: 1.2em; 
   }
 
   .descricao {
-    padding: 15px; /* Diminui o padding da descrição em telas pequenas */
+    padding: 15px; 
   }
 }
 
 
 @media (max-width: 768px) {
 
-  /* Ajusta o texto dos títulos para um tamanho menor e centralizado */
+
   .TecExemplos,
   .TiposAgro,
   .Agrin,
@@ -1187,9 +1196,11 @@ button:hover {
     font-size: 1.5em;
     padding: 10px 5px;
     text-align: center;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
-  /* Ajusta largura e padding das caixas para caber na tela */
+  
   .Agro,
   .AgroEx,
   .AgrinEX,
@@ -1199,9 +1210,11 @@ button:hover {
     max-width: 95%;
     margin: 20px auto;
     padding: 15px;
+    text-align: justify;
+     text-justify: inter-word;
   }
 
-  /* Para .AgroEx que usa grid, muda para layout vertical */
+  
   .AgroEx {
     display: block;
     padding: 15px;
@@ -1215,7 +1228,7 @@ button:hover {
     text-align: center;
   }
 
-  /* Ajusta descrição e imagem para ficarem um abaixo do outro */
+
   .AgroEx > .comdes {
     grid-column: auto;
     grid-row: auto;
@@ -1231,12 +1244,14 @@ button:hover {
     border-radius: 8px;
   }
 
-  /* Ajusta tamanho da fonte nos parágrafos para melhor leitura */
+
   .AgroEx p,
   .Agro p,
   .TecTexto p {
     font-size: 0.9em;
     line-height: 1.4em;
+    text-align: justify;
+text-justify: inter-word;
   }
 }
 
@@ -1248,6 +1263,8 @@ button:hover {
     padding: 10px;
     max-width: 100%;
     gap: 20px;
+    text-align: justify;
+text-justify: inter-word;
   }
 }
 
