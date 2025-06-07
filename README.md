@@ -150,12 +150,12 @@ Esse projeto foi uma verdadeira jornada de aprendizado. Superar as dificuldades 
 
 **Este projeto foi desenvolvido principalmente por mim, Melissa Rossa Pereira.**
 
-**Se quiser sugerir melhorias ou relatar algum problema, fique à vontade para entrar em contato comigo pelas redes sociais disponíveis na seção de contato do site.**
+**Se quiser sugerir melhorias ou relatar algum problema, fique à vontade para entrar em contato comigo pelas redes sociais disponíveis aqui e no meu site.**
 
 
 **📱 Contato:**
 
-📞 Número: [ +55 (42) 9 9910-6956 ](tel:+5542999106956)
+📞 Número: [ +55 (42) 9 9910-6956 ](https://wa.me/554299106956)
 
 ✉️ E-mail: [melissarossap@gmail.com](mailto:melissarossap@gmail.com)
 
