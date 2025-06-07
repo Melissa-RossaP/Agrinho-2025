@@ -31,7 +31,7 @@ body {
   text-align: justify;
 }
 
-/* Fazendo o header */
+
 header {
     display: flex;
     justify-content: center;
@@ -223,26 +223,26 @@ cursor: pointer;
 
 
 nav ul {
-    list-style-type: none; /* Remove os marcadores da lista */
-    display: flex; /* Alinha os itens em linha */
-    flex-direction: column; /* Agora os itens estarão em coluna */
+    list-style-type: none; 
+    display: flex; 
+    flex-direction: column; 
     margin: 0;
     padding: 0;
   }
   
   nav ul li {
-    margin-bottom: 10px; /* Espaço entre os itens */
+    margin-bottom: 10px; 
   }
   
   nav ul li a {
     display: inline-block; 
-    color: rgb(29, 75, 25); /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado */
+    color: rgb(29, 75, 25); 
+    text-decoration: none; 
     font-size: 1em;
-    padding: 3px 6px; /* Espaçamento interno ao redor do texto */
-    background-color: rgb(81, 156, 74); /*  fundo com a mesma cor da borda */
-    border: 2.5px solid rgb(74, 141, 67); /* Borda da mesma cor do fundo */
-    border-radius: 5px; /* Bordas meio redonda  */
+    padding: 3px 6px; 
+    background-color: rgb(81, 156, 74); 
+    border: 2.5px solid rgb(74, 141, 67); 
+    border-radius: 5px; 
     transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
 
@@ -260,15 +260,15 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   font-size: 0.8em;
-  padding: 20px 30px; /* padding mais compacto */
+  padding: 20px 30px; 
   overflow: hidden;
   border: 2px solid rgb(46, 97, 42);
   border-radius: 20px;
   background-color: rgb(119, 187, 109);
   color: rgb(40, 73, 30);
-  text-align: center; /* Centraliza o texto dentro */
-  max-width: 1000px; /* Limita a largura para telas grandes */
-  margin: 20px auto; /* Centraliza horizontalmente na página */
+  text-align: center; 
+  max-width: 1000px; 
+  margin: 20px auto; 
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
   margin-bottom: 5%;
   text-align: justify;
@@ -276,15 +276,12 @@ nav ul li a:hover {
 
 
 
-
-/*Carrossel*/
-
 .carrossel {
   display: flex;
-  flex-wrap: wrap; /* permite quebrar linha em telas menores */
+  flex-wrap: wrap; 
   gap: 40px;
   justify-content: center;
-  margin: 30px 20px; /* adiciona margem lateral */
+  margin: 30px 20px; 
  overflow: visible;
  text-align: justify;
  
@@ -292,8 +289,8 @@ nav ul li a:hover {
 .item {
   position: relative;
   width: 100%;
-  max-width: 200px; /* mantém tamanho máximo */
-  aspect-ratio: 4 / 5; /* mantém proporção semelhante a 200x250 */
+  max-width: 200px; 
+  aspect-ratio: 4 / 5; 
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 10px;
@@ -325,7 +322,7 @@ nav ul li a:hover {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.6s ease;
-  padding: 1px; /* evita que o texto encoste nas bordas */
+  padding: 1px; 
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -390,7 +387,7 @@ a {
   text-align: center;
 }
 
-/* Animação individual para linha1 */
+
 .linha1 {
   font-size: 2em;
   margin-bottom: 0.3em;
@@ -401,7 +398,7 @@ a {
   animation-delay: 0s;
 }
 
-/* Animação individual para linha2 com delay */
+
 .linha2 {
   font-size: 3em;
   font-family: 'Courier New', Courier, monospace;
@@ -474,8 +471,8 @@ a {
   color: #163107;
   font-family: 'Times New Roman', Times, serif;
   text-decoration: underline;
-  text-decoration-thickness: 2px; /* destaque maior */
-  text-decoration-color: #497740; /* reforça a cor */
+  text-decoration-thickness: 2px; 
+  text-decoration-color: #497740; 
   text-decoration-style: solid;
 }
 
@@ -518,7 +515,7 @@ text-justify: inter-word;
 
 .AgroEx {
   display: grid;
-  grid-template-columns: 1fr 250px; /* esquerda texto, direita imagem */
+  grid-template-columns: 1fr 250px; 
   column-gap: 80px;
   max-width: 800px;
   margin: 40px auto;
@@ -585,8 +582,8 @@ text-justify: inter-word;
   color: #163107;
   font-family: 'Times New Roman', Times, serif;
   text-decoration: underline;
-  text-decoration-thickness: 2px; /* destaque maior */
-  text-decoration-color: #497740; /* reforça a cor */
+  text-decoration-thickness: 2px; 
+  text-decoration-color: #497740; 
   text-decoration-style: solid;
 }
 
@@ -632,7 +629,6 @@ text-justify: inter-word;
 
 
 
-/*Tecnologia mini Título + o Texto */
 
 .tecnologia {
   text-align: center;
@@ -666,7 +662,7 @@ text-justify: inter-word;
 
 
 
-/* Estilo da linha do tempo */
+
 
 .Titu{
   text-align: center;
@@ -690,7 +686,7 @@ text-justify: inter-word;
 
 
 
-/* Estilo para os eventos da linha do tempo */
+
 .evento {
   display: flex;
   flex-direction: row;
@@ -715,7 +711,7 @@ text-justify: inter-word;
 }
 
 
-/* Estilo para o ano */
+
 .ano {
   font-size: 1.5em;
   font-weight: bold;
@@ -724,7 +720,7 @@ text-justify: inter-word;
   z-index: 1; /*sobrepo*/
 }
 
-/* Estilo da descrição dos eventos (quadradinhos) */
+
 .descrição {
   background-color: #aaf1ad;
   padding: 20px;
@@ -789,7 +785,7 @@ text-justify: inter-word;
   gap: 40px;               
 }
 
-/* Container do quiz */
+
 .quiz-container {
   background-color: #c8f8b5;
   padding: 20px;
@@ -803,7 +799,7 @@ text-justify: inter-word;
   border: 2px solid rgb(46, 97, 42);
 }
 
-/* Questão */
+
 .question {
   margin-bottom: 20px;
   border: 2px solid rgb(15, 54, 12); 
@@ -812,7 +808,7 @@ text-justify: inter-word;
   background-color: #78c57f;
 }
 
-/*respostas */
+
 label {
   display: block;
   margin-top: 8px;
@@ -821,7 +817,7 @@ label {
   font-weight: 600;
 }
 
-/* Botão */
+
 button {
   gap: 20px;
   margin-top: 20px;
@@ -868,7 +864,7 @@ button:hover {
   font-family: Arial, sans-serif;
 }
 
-/* Respostas exibidas */
+
 #respostas {
   margin-top: 40px;
 }
@@ -884,7 +880,7 @@ button:hover {
   font-weight: 600;
 }
 
-/* Confetti container fixo e invisível para interação */
+
 .confetti-container {
   position: fixed;
   top: 0;
@@ -896,7 +892,7 @@ button:hover {
   z-index: 1000;
 }
 
-/* Confetti individual */
+
 .confetti {
   position: absolute;
   width: 10px;
@@ -908,7 +904,7 @@ button:hover {
   box-shadow: 0 0 2px rgb(74, 141, 67);
 }
 
-/* Animação da queda do confetti */
+
 @keyframes fall {
   0% {
     transform: translateY(0) rotate(0deg);
@@ -926,10 +922,10 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start; /* Alinha os conteúdos ao topo com espaço */
+  align-items: flex-start; 
   width: 100%;
   min-height: 10px;
-  padding: 10px 10px; /* Aumentado o padding vertical */
+  padding: 10px 10px; 
   background-color: rgb(128, 187, 112);
   color: rgb(24, 66, 12);
   box-sizing: border-box;
@@ -1030,7 +1026,7 @@ button:hover {
 
 
 
-/* RESPONSIVIDADE: Ajustes para telas menores ou com zoom */
+/* RESPONSIVIDADE*/
 
 
 @media (max-width: 768px), (max-zoom: 1.1) {
@@ -1050,7 +1046,7 @@ button:hover {
   }
 
   .contatos a {
-    margin-bottom: 10px; /* Espaçamento vertical ao quebrar linhas */
+    margin-bottom: 10px; 
   }
 
   .contatos img {
@@ -1296,14 +1292,14 @@ text-justify: inter-word;
   }
 }
 
-/* Ajusta o tamanho em telas médias */
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 2em;
   }
 }
 
-/* Ajusta ainda mais em telas pequenas */
+
 @media (max-width: 480px) {
   header h1 {
     font-size: 1.5em;

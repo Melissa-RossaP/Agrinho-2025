@@ -33,7 +33,7 @@ body {
   text-align: center;
 }
 
-/* Animação individual para linha1 */
+
 .linha1 {
   font-size: 2em;
   margin-bottom: 0.3em;
@@ -44,7 +44,7 @@ body {
   animation-delay: 0s;
 }
 
-/* Animação individual para linha2 com delay */
+
 .linha2 {
   font-size: 3em;
   font-family: 'Courier New', Courier, monospace;
@@ -312,7 +312,7 @@ nav ul {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  position: relative; /* para o menu absoluto funcionar melhor */
+  position: relative; 
 }
 
 nav ul li {
@@ -527,10 +527,10 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start; /* Alinha os conteúdos ao topo com espaço */
+  align-items: flex-start; 
   width: 100%;
   min-height: 10px;
-  padding: 10px 10px; /* Aumentado o padding vertical */
+  padding: 10px 10px; 
   background-color: rgb(128, 187, 112);
   color: rgb(24, 66, 12);
   box-sizing: border-box;

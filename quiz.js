@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     q8: 'b'
   };
 
-  let respostasVisiveis = false; // flag para controlar se respostas estão visíveis
+  let respostasVisiveis = false; 
 
   function createConfetti() {
     const confettiContainer = document.createElement('div');
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     this.textContent = "Corrigir";
     document.getElementById("verRespostasBtn").style.display = "inline-block";
 
-    // Sempre que corrigir, esconder as respostas para resetar o estado
+ 
     respostasVisiveis = false;
     document.getElementById("respostas").style.display = "none";
     document.getElementById("respostas").innerHTML = "";
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const respostasDiv = document.getElementById("respostas");
 
     if (!respostasVisiveis) {
-      // Mostrar respostas
+     
       const respostas = [
         "1) Produzir alimentos (b)",
         "2) Substâncias usadas para combater pragas (c)",
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "8) Rotação de culturas (b)"
       ];
 
-      respostasDiv.innerHTML = ""; // limpa
+      respostasDiv.innerHTML = ""; 
       respostas.forEach((resposta) => {
         const box = document.createElement("div");
         box.className = "resposta-box";
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       respostasVisiveis = true;
 
     } else {
-      // Esconder respostas
+      
       respostasDiv.style.display = "none";
       respostasDiv.innerHTML = "";
       this.textContent = "Ver respostas";
@@ -179,7 +179,7 @@ function contraste() {
   document.body.classList.toggle('contraste-ativo');
 }
 
-// só para dizer oq q é oq
+
 let lendo = false;
 let utterance = null;
 let canceladoPeloUsuario = false;
@@ -187,36 +187,35 @@ let canceladoPeloUsuario = false;
 function lerTexto() {
   const botao = document.getElementById("botaoLeitura");
 
-  // Se já tiver lendo ele vai cancelar
+ 
   if (lendo) {
-    canceladoPeloUsuario = true; // avisar que foi o usuário que cancelou
+    canceladoPeloUsuario = true; 
     speechSynthesis.cancel();
     lendo = false;
     botao.innerText = "Ler";
     return;
   }
 
-  // Verifica se o SpeechSynthesis ta funfando
+  
   if (!window.speechSynthesis) {
     alert("A leitura de texto não é suportada neste navegador.");
     return;
   }
 
-  // Evita que leia tudo junto mais de uma vez sabe
+  
   speechSynthesis.cancel();
 
-  // Cria o bixo que fala
+  
   const texto = document.body.innerText;
   utterance = new SpeechSynthesisUtterance(texto);
   utterance.lang = 'pt-BR';
   utterance.rate = 1;
 
-  // ta lendo
   lendo = true;
   canceladoPeloUsuario = false;
   botao.innerText = "Parar";
 
-  // Termina bem de boas
+
   utterance.onend = () => {
     lendo = false;
     botao.innerText = "Ler";
@@ -231,7 +230,7 @@ function lerTexto() {
     }
   };
 
-  // O bixo começa a ler
+ 
   try {
     speechSynthesis.speak(utterance);
   } catch (e) {
