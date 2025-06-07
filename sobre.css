@@ -45,7 +45,6 @@ header {
   max-width: calc(100% - 40px);
    overflow: hidden; 
   max-width: 50vw; 
-  text-align: justify;
 }
 
 header.menu-aberto {
@@ -309,7 +308,7 @@ nav ul li a:hover {
   text-align: justify;
 }
 
-.AGRINHO img, .Brasil img {
+.AGRINHO img{
   width: 100%;
   max-width: 250px;
   border-radius: 8px;
@@ -392,7 +391,40 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
+.Wiki {
+  color: #16380e;
+  font-weight: bold;
+  font-size: 1em;  
+  text-decoration: underline dashed #65915f;
+}
 
+
+.Wiki:hover {
+  color: #082c08;
+  text-decoration: underline solid #2c5f2c;
+}
+
+.Brasil .comdes p{
+  text-decoration: underline;
+  text-decoration-color: #0b3006;
+}
+
+.Brasil .comdes, .comdes p {
+  color: #0b3006;
+  font-size: 1em;
+  word-break:break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Brasil img{
+  align-self: center;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
 
 
 .FooterCon {
@@ -556,14 +588,14 @@ h2, h3 {
   }
 }
 
-/* Ajusta o tamanho em telas médias */
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 2em;
   }
 }
 
-/* Ajusta ainda mais em telas pequenas */
+
 @media (max-width: 480px) {
   header h1 {
     font-size: 1.5em;
@@ -677,33 +709,31 @@ h2, h3 {
 }
 }
 
-@media (max-width: 1024px), (max-width: 768px), (max-width: 480px){
+@media (max-width: 1024px), (max-width: 768px), (max-width: 480px) {
 
-
-    .PRINCIPAL{
+  .PRINCIPAL {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     box-sizing: border-box;
-  }
-
- .PRINCIPAL{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     gap: 20px;
+    width: 100%;
+    min-width: 320px;
   }
 
-.Reserva, .AGRINHO, .Brasil, .INICIO, .AGROHIST, .Sitezinho, .Final,.Rolandinho{
-  flex-direction: column;
-    width: 60%;
-    max-width: 60%;
+  .Reserva, .AGRINHO, .Brasil, .INICIO, .AGROHIST, .Sitezinho, .Final, .Rolandinho {
+    width: 90%;
+    max-width: 700px;
     padding: 20px;
-    margin: 10px 0;
+    margin: 10px auto;
     box-sizing: border-box;
     word-break: break-word;
     overflow-wrap: break-word;
-    align-self: center;
-}
-
+    margin-top: 20px;
+    margin-bottom: 2;
+  }
 }

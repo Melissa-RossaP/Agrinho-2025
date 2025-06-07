@@ -56,7 +56,6 @@ header {
   max-width: calc(100% - 40px);
    overflow: hidden; 
   max-width: 50vw; 
-  text-align: justify;
 }
 
 header.menu-aberto {
@@ -333,8 +332,21 @@ a {
   color: #16380e;
   font-weight: bold;
   font-size: 1em;  
-  margin-top: 1px; /* separa do texto acima */
+  margin-top: 1px; 
+  text-decoration: none;
 }
+
+.creditos-fontes a {
+  color: #2c5d2c; 
+  text-decoration: underline dashed #96b492;
+  font-weight: bold;
+}
+
+.creditos-fontes a:hover {
+  color: #1f3d1f;
+  text-decoration: underline solid #5a8e5a;
+}
+
 .item input:checked ~ .texto {
   opacity: 1;
   pointer-events: auto;

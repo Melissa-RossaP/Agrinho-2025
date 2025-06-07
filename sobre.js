@@ -23,15 +23,70 @@ function diminuirFonte() {
 function contraste() {
   document.body.classList.toggle('contraste-ativo');
 }
+// só para dizer oq q é oq
+let lendo = false;
+let utterance = null;
+let canceladoPeloUsuario = false;
 
 function lerTexto() {
+  const botao = document.getElementById("botaoLeitura");
+
+  // Se já tiver lendo ele vai cancelar
+  if (lendo) {
+    canceladoPeloUsuario = true; // avisar que foi o usuário que cancelou
+    speechSynthesis.cancel();
+    lendo = false;
+    botao.innerText = "Ler";
+    return;
+  }
+
+  // Verifica se o SpeechSynthesis ta funfando
+  if (!window.speechSynthesis) {
+    alert("A leitura de texto não é suportada neste navegador.");
+    return;
+  }
+
+  // Evita que leia tudo junto mais de uma vez sabe
   speechSynthesis.cancel();
+
+  // Cria o bixo que fala
   const texto = document.body.innerText;
-  const utterance = new SpeechSynthesisUtterance(texto);
+  utterance = new SpeechSynthesisUtterance(texto);
   utterance.lang = 'pt-BR';
   utterance.rate = 1;
-  speechSynthesis.speak(utterance);
+
+  // ta lendo
+  lendo = true;
+  canceladoPeloUsuario = false;
+  botao.innerText = "Parar";
+
+  // Termina bem de boas
+  utterance.onend = () => {
+    lendo = false;
+    botao.innerText = "Ler";
+  };
+
+  // Em caso aconteça algum erro
+  utterance.onerror = () => {
+    lendo = false;
+    botao.innerText = "Ler";
+    if (!canceladoPeloUsuario) {
+      alert("Erro ao tentar ler o texto.");
+    }
+  };
+
+  // O bixo começa a ler
+  try {
+    speechSynthesis.speak(utterance);
+  } catch (e) {
+    lendo = false;
+    botao.innerText = "Ler";
+    alert("Este navegador não permite leitura de texto automaticamente.");
+  }
 }
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const btnTopo = document.getElementById('btnTopo');
@@ -58,7 +113,7 @@ window.addEventListener('load', () => {
   const imgs = track.querySelectorAll('img');
   const totalImgs = imgs.length;
 
-  // Duplica o conteúdo para rolagem infinita
+  
   track.innerHTML += track.innerHTML;
 
   let position = 0;
