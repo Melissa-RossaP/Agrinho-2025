@@ -100,9 +100,9 @@ Telas pequenas (celular)
 
 **♿ Acessibilidade:**
 
-*Para garantir maior inclusão e acessibilidade, o site conta com um plugin de Libras (Língua Brasileira de Sinais), que permite a tradução do conteúdo para Libras.*
+*Para garantir maior inclusão e acessibilidade, o site conta com diversos recursos voltados para pessoas com deficiência. Um dos destaques é o plugin de Libras (Língua Brasileira de Sinais), retirado do projeto VLibras que é uma ferramenta oficial mantida pelo governo brasileiro que traduz o conteúdo do site para Libras, facilitando o acesso para pessoas surdas!*
 
-*O plugin utilizado foi retirado do projeto VLibras, uma ferramenta oficial mantida pelo governo brasileiro que facilita o acesso à informação para pessoas surdas.*
+*Além disso, o site permite aumentar e diminuir o tamanho das letras (fontes), ajustar o contraste para melhorar a leitura, e também possui a funcionalidade de leitura em voz alta. Esse recurso está disponível para computadores, notebooks, tablets e alguns modelos de celulares, contribuindo para a inclusão de pessoas com deficiência visual ou com dificuldades de leitura.*
 
 
 **🎨 Identidade Visual:**
