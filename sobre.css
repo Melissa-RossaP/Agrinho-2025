@@ -14,12 +14,10 @@ body {
 #splash-screen {
   font-family: 'Courier New', Courier, monospace;
   position: fixed;
-  top: 0;
+  top: 0; 
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100vw; height: 100vh;
   background: #014421;
-  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,12 +25,19 @@ body {
   z-index: 9999;
   color: #ffffff;
   overflow: hidden;
+  animation: fadeOutSplash 5s forwards 4s; /* espera 4s, depois some em 5s */
+}
+
+@keyframes fadeOutSplash {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .splash-text {
   text-align: center;
 }
-
 
 .linha1 {
   font-size: 2em;
@@ -40,22 +45,18 @@ body {
   opacity: 0;
   transform: scale(0.8);
   filter: blur(4px);
-  animation: fadeZoomIn 1.8s ease forwards;
-  animation-delay: 0s;
+  animation: fadeZoomIn 1.8s ease forwards 0s;
 }
-
 
 .linha2 {
   font-size: 3em;
-  font-family: 'Courier New', Courier, monospace;
   color: #a8ffbf;
   text-shadow: 0 0 12px #79d997;
   letter-spacing: 1px;
   opacity: 0;
   transform: scale(0.8);
   filter: blur(4px);
-  animation: fadeZoomIn 1.8s ease forwards;
-  animation-delay: 1s;
+  animation: fadeZoomIn 1.8s ease forwards 1s;
 }
 
 @keyframes fadeZoomIn {
@@ -76,33 +77,6 @@ body {
   }
 }
 
-#splash-screen.fade-out {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 1.5s ease;
-}
-
-@media (max-width: 767px) {
-  .linha1 {
-    font-size: 1.5em;
-    margin-bottom: 0.2em;
-  }
-
-  .linha2 {
-    font-size: 2em;
-    letter-spacing: 0.5px;
-    text-shadow: 0 0 8px #79d997;
-  }
-} 
-
-.PRINCIPAL {
-  opacity: 0;
-  transition: opacity 1.5s ease;
-}
-
-.PRINCIPAL.visible {
-  opacity: 1;
-}
 
 header {
   display: flex;
@@ -240,11 +214,14 @@ cursor: pointer;
   position: absolute;
   background-color: #f0fff0;
   border: 2px solid #2d551d;
-  padding: 10px;
+  padding: 20px;
+  padding-left: 20px;
+  padding-right: 40px;
   border-radius: 12px;
   z-index: 1000;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   width: max-content;
+  overflow: hidden;
 }
 
 .menu.ativo {
@@ -286,23 +263,47 @@ cursor: pointer;
   color: #333;
 }
 
+#toggleMenu:checked ~ .acessibilidade #menuAcessibilidade {
+  display: block;
+}
 
-  .contraste-ativo {
-    background-color: black !important;
-    color: rgb(251, 255, 0) !important;
-  }
+.PRINCIPAL {
+  font-size: 20px;
+}
 
-  .contraste-ativo button {
-    background-color: #1d1919 !important;
-    color: rgb(238, 255, 0) !important;
-  }
+#aumentar:checked ~ .PRINCIPAL {
+  font-size: 26px;
+}
 
-  .contraste-ativo a, 
-.contraste-ativo span{
+#diminuir:checked ~ .PRINCIPAL {
+  font-size: 15px;
+}
+
+#normal:checked ~ .PRINCIPAL {
+  font-size: 20px;
+}
+
+
+#contraste:checked ~ .PRINCIPAL {
+  background-color: black !important;
   color: rgb(251, 255, 0) !important;
 }
-.contraste-ativo h1{
-  color: rgb(255, 255, 255);
+
+#contraste:checked ~ .PRINCIPAL a,
+#contraste:checked ~ .PRINCIPAL span {
+  color: rgb(251, 255, 0) !important;
+}
+
+#contraste:checked ~ .PRINCIPAL button {
+  background-color: #1d1919 !important;
+  color: rgb(238, 255, 0) !important;
+}
+
+#contraste:checked ~ .PRINCIPAL h1,
+#contraste:checked ~ .PRINCIPAL h2,
+#contraste:checked ~ .PRINCIPAL h3,
+#contraste:checked ~ .PRINCIPAL p {
+  color: white !important;
 }
 
 
@@ -473,11 +474,12 @@ nav ul li a:hover {
 .Fotos {
   display: flex;
   width: max-content;
+  animation: slide 40s linear infinite;
   will-change: transform;
 }
 
 .Fotos img {
-  width: calc(1000px / 4);
+  width: calc(800px / 4 - 15px); /* 4 imagens no container, menos margem */
   flex-shrink: 0;
   object-fit: cover;
   border: 3px solid #265326;
@@ -486,6 +488,17 @@ nav ul li a:hover {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+/* Animação: move a largura total das 8 imagens originais + margens */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * ( ( (800px / 4 - 15px) + 20px ) * 8 )));
+  }
+}
+
 
 .Wiki {
   color: #16380e;

@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="sobre.css">
-    <script src="sobre.js"></script>
      <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
     <title>Sobre:</title>
 </head>
 <body>
     <header>
 
-     <div id="splash-screen">
-  <div class="splash-text">
-    <span class="linha1">Bem-vindo(a) ao </span><br>
-    <strong class="linha2">Sobre R.U</strong> 
-  </div>
+<div id="splash-screen">
+<div class="splash-text">
+<span class="linha1">Bem-vindo(a) ao </span><br>
+<strong class="linha2"> Sobre R.U!</strong>
+</div>
 </div>
 
 
@@ -26,10 +25,13 @@
       </div>
 
 
-      <div class="acessibilidade">
-  <button onclick="toggleMenu()" aria-label="Acessibilidade" class="abnace">
+<input type="checkbox" id="toggleMenu" hidden>
+
+<div class="acessibilidade">
+  <label for="toggleMenu" aria-label="Acessibilidade" class="abnace">
     <img src="img/acessibilidade.png" alt="Ícone de acessibilidade">
-  </button>
+  </label>
+
   <p class="creditos">
     <a href="https://www.flaticon.com/br/icones-gratis/acessibilidade" title="acessibilidade ícones" target="_blank" rel="noopener">
       Acessibilidade ícones<br> criados por Stockio - Flaticon
@@ -37,27 +39,13 @@
   </p>
 
   <div id="menuAcessibilidade" class="menu">
-    <button onclick="aumentarFonte()" class="botao">A+</button>
-    <button onclick="diminuirFonte()" class="botao">A-</button>
-    <button onclick="contraste()" class="botao">Contraste</button>
-    <button onclick="lerTexto()" class="botao" id="botaoLeitura">Ler</button>
+    <label for="aumentar" class="botao">A+</label>
+    <label for="diminuir" class="botao">A-</label>
+    <label for="normal" class="botao">Normal</label>
+    <label for="contraste" class="botao">Contraste</label>
   </div>
 </div>
-
     
-<div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div class="vw-plugin-top-wrapper"></div>
-  </div>
-</div>
-
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-  new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
-
-
 
         <h1>
           Sobre: R.U
@@ -68,9 +56,10 @@
         </ul>
     </nav>
     </header>
-
-
-
+<input type="radio" name="fonte" id="normal" hidden checked>
+<input type="radio" name="fonte" id="aumentar" hidden>
+<input type="radio" name="fonte" id="diminuir" hidden>
+<input type="checkbox" id="contraste" hidden>
 
     <div class="PRINCIPAL">
 
@@ -116,6 +105,17 @@ Além disso, é reconhecida pela produção de tomate, que impulsionou a economi
     <img src="img/Plantação 6.jpg" alt="Imagem 6" />
     <img src="img/Plantação 7.jpg" alt="Imagem 7" />
     <img src="img/Plantação 8.jpg" alt="Imagem 8" />
+
+
+    <img src="img/Plantação2.jpg" alt="Imagem 1" />
+    <img src="img/Plantação1.jpg" alt="Imagem 2" />
+    <img src="img/Plantação3.jpg" alt="Imagem 3" />
+    <img src="img/Plantação4.jpg" alt="Imagem 4" />
+    <img src="img/Plantação 5.jpg" alt="Imagem 5" />
+    <img src="img/Plantação 6.jpg" alt="Imagem 6" />
+    <img src="img/Plantação 7.jpg" alt="Imagem 7" />
+    <img src="img/Plantação 8.jpg" alt="Imagem 8" />
+
   </div>
   <p>Todas as Fotos que estão aparecendo são autorais por Melissa Rossa Pereira.</p>
 </div>

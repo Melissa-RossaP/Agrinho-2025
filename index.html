@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="quiz.js"></script>
     <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
     <title>Ruralidades Urbanas</title>
 
@@ -29,10 +28,13 @@
       </div>
 
 
+<input type="checkbox" id="toggleMenu" hidden>
+
 <div class="acessibilidade">
-  <button onclick="toggleMenu()" aria-label="Acessibilidade" class="abnace">
+  <label for="toggleMenu" aria-label="Acessibilidade" class="abnace">
     <img src="img/acessibilidade.png" alt="Ícone de acessibilidade">
-  </button>
+  </label>
+
   <p class="creditos">
     <a href="https://www.flaticon.com/br/icones-gratis/acessibilidade" title="acessibilidade ícones" target="_blank" rel="noopener">
       Acessibilidade ícones<br> criados por Stockio - Flaticon
@@ -40,21 +42,13 @@
   </p>
 
   <div id="menuAcessibilidade" class="menu">
-    <button onclick="aumentarFonte()" class="botao">A+</button>
-    <button onclick="diminuirFonte()" class="botao">A-</button>
-    <button onclick="contraste()" class="botao">Contraste</button>
-    <button onclick="lerTexto()" class="botao" id="botaoLeitura">Ler</button>
+    <label for="aumentar" class="botao">A+</label>
+    <label for="diminuir" class="botao">A-</label>
+    <label for="normal" class="botao">Normal</label>
+    <label for="contraste" class="botao">Contraste</label>
   </div>
 </div>
-
     
-<div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div class="vw-plugin-top-wrapper"></div>
-  </div>
-</div>
-
 
         <h1>Ruralidades Urbanas</h1>
 
@@ -71,13 +65,12 @@
           
 
     </header>
+<input type="radio" name="fonte" id="normal" hidden checked>
+<input type="radio" name="fonte" id="aumentar" hidden>
+<input type="radio" name="fonte" id="diminuir" hidden>
+<input type="checkbox" id="contraste" hidden>
 
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-  new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
-
-
+<div class="PRINCIPAL">
 
 <div class="Meio"> 
     <main>
@@ -472,92 +465,8 @@ Esses desafios mostram a necessidade de práticas agrícolas mais sustentáveis,
 
 
 
- <div class="quiz-wrapper">
-    <div class="quiz-container">
-      <h1>QUIZ: Agricultura </h1>
-
-      <div class="question">
-        <p>1) Qual é a principal função da agricultura?</p>
-        <label><input type="radio" name="q1" value="a" />Proteger os animais</label>
-        <label><input type="radio" name="q1" value="b" />Produzir alimentos</label>
-        <label><input type="radio" name="q1" value="c" />Cuidar das florestas</label>
-        <label><input type="radio" name="q1" value="d" />Preservar rios</label>
-      </div>
-
-      <div class="question">
-        <p>2) O que são agrotóxicos?</p>
-        <label><input type="radio" name="q2" value="a" /> Produtos naturais que melhoram o solo</label>
-        <label><input type="radio" name="q2" value="b" /> Máquinas usadas na plantação</label>
-        <label><input type="radio" name="q2" value="c" /> Substâncias usadas para combater pragas</label>
-        <label><input type="radio" name="q2" value="d" /> Técnicas de irrigação</label>
-      </div>
-
-      <div class="question">
-        <p>3) Qual revolução aumentou a produtividade agrícola com uso de máquinas?</p>
-        <label><input type="radio" name="q3" value="a" /> Revolução Francesa</label>
-        <label><input type="radio" name="q3" value="b" /> Revolução Verde</label>
-        <label><input type="radio" name="q3" value="c" />Revolução Industrial</label>
-        <label><input type="radio" name="q3" value="d" />  Revolução Agrária</label>
-      </div>
-
-      <div class="question">
-        <p>4) O que é agricultura sustentável?</p>
-        <label><input type="radio" name="q4" value="a" />  Uso intensivo de agrotóxicos</label>
-        <label><input type="radio" name="q4" value="b" /> Plantio apenas de soja</label>
-        <label><input type="radio" name="q4" value="c" /> Produção que respeita o meio ambiente</label>
-        <label><input type="radio" name="q4" value="d" />  Plantio em áreas urbanas</label>
-      </div>
-
-      <div class="question">
-        <p>5) Qual tipo de agricultura é voltada para o consumo da própria família?</p>
-        <label><input type="radio" name="q5" value="a" />  Agricultura comercial</label>
-        <label><input type="radio" name="q5" value="b" /> Agricultura de precisão</label>
-        <label><input type="radio" name="q5" value="c" /> Agricultura familiar</label>
-        <label><input type="radio" name="q5" value="d" />  Agricultura sustentável</label>
-      </div>
-
-      <div class="question">
-        <p>6) O que caracteriza a agricultura moderna?</p>
-        <label><input type="radio" name="q6" value="a" />  Uso de técnicas tradicionais</label>
-        <label><input type="radio" name="q6" value="b" /> Uso de ferramentas manuais</label>
-        <label><input type="radio" name="q6" value="c" />  Uso de máquinas e tecnologia</label>
-        <label><input type="radio" name="q6" value="d" />  Plantio rotativo apenas</label>
-      </div>
-
-      <div class="question">
-        <p>7) Como a agricultura pode contribuir com o meio ambiente?</p>
-        <label><input type="radio" name="q7" value="a" />  Desmatando áreas para plantar</label>
-        <label><input type="radio" name="q7" value="b" />  Usando mais pesticidas</label>
-        <label><input type="radio" name="q7" value="c" />  Aplicando práticas sustentáveis</label>
-        <label><input type="radio" name="q7" value="d" /> Usando fertilizantes em excesso</label>
-      </div>
-
-      <div class="question">
-        <p>8) Qual é uma prática sustentável na agricultura?</p>
-        <label><input type="radio" name="q8" value="a" />  Queimada do solo</label>
-        <label><input type="radio" name="q8" value="b" />  Rotação de culturas</label>
-        <label><input type="radio" name="q8" value="c" />  Uso intensivo de pesticidas</label>
-        <label><input type="radio" name="q8" value="d" />  Monocultura intensiva</label>
-      </div>
-
-      <button id="corrigirBtn">Corrigir</button>
-      <button id="verRespostasBtn" style="display:none;">Ver respostas</button>
-      <div id="respostas" class="respostas-container"></div>
-    </div>
-
-    <div class="resultado-container">
-      <h2>
-        RESULTADO:
-      </h2>
-      <p id="resultadoTexto"></p>
-    </div>
-    
-  </div>
-
-  <script src="quiz.js"></script>
-
-
     </main>
+  </div>
   </div>
 
   <footer id="contato">
