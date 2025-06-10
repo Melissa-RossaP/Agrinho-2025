@@ -2,11 +2,9 @@
 
 **🌾 Bem-vindo ao site Ruralidades Urbanas!🌾**
 
-*Este projeto foi criado com o objetivo de ensinar de forma interativa sobre a agricultura, sua história, tipos e práticas sustentáveis, e ainda por meio de um quiz online!*
+*Este projeto foi criado com o objetivo de ensinar de forma interativa sobre a agricultura, sua história, tipos e práticas sustentáveis.*
 
-*Neste site, você encontrará um quiz interativo sobre agricultura, que aborda temas como história, tipos de agricultura e práticas sustentáveis.*
-
-*O quiz oferece correção automática, mostra as respostas corretas e permite que o usuário tente novamente, tornando o aprendizado dinâmico e acessível.*
+*Neste site, você encontrará Textos sobre a agricultura, textos que abordam temas como história, tipos de agricultura e práticas sustentáveis.*
 
 *Nosso objetivo é valorizar o campo, sua história, importância e as inovações que o tornam essencial para a vida urbana e rural.*
 
@@ -14,11 +12,11 @@
 
 Este site tem como missão informar, inspirar e valorizar o papel do campo em nossas vidas. Mesmo morando em áreas urbanas, todos dependemos da agricultura para a alimentação, produtos e sustentabilidade.
 
-Através de um conteúdo educativo e interativo, quero contribuir para que mais pessoas entendam essa conexão fundamental entre campo e cidade.
+Através de um conteúdo educativo, quero contribuir para que mais pessoas entendam essa conexão fundamental entre campo e cidade.
 
 *🛠 Tecnologias Utilizadas:*
 
-Site desenvolvido no Visual Studio Code (VScode), utilizando HTML, CSS e JavaScript
+Site desenvolvido no Visual Studio Code (VScode), utilizando HTML e CSS.
 
 Código dividido em div's bem organizadas por seção, facilitando a estilização
 
@@ -27,8 +25,6 @@ Vercel foi a plataforma para hospedagem e publicação do site online
 Design responsivo para telas grandes, médias e pequenas, usando @media queries
 
 O protótipo do site foi feito no Figma
-
-VLibras foi o plugin oficial para acessibilidade em Libras
 
 Google Fonts para fontes personalizadas
 
@@ -42,11 +38,9 @@ Google Fonts para fontes personalizadas
 
 • Footer (rodapé) com informações e créditos
 
-• Carrossel interativo de imagens com JavaScript
+• Carrossel interativo
 
-• Linha do tempo animada, mostrando a evolução da agricultura
-
-• Botão "voltar ao topo" ao final da página
+• Linha do tempo, mostrando a evolução da agricultura
 
 **• Seção de contato com:**
 
@@ -57,19 +51,6 @@ Google Fonts para fontes personalizadas
 *GitHub*
 
 *LinkedIn*
-
-**Quiz interativo com 8 perguntas, incluindo:**
-• Correção automática
-
-• Cálculo de acertos em porcentagem
-
-• Exibição das respostas corretas
-
-• Botão "Ver respostas"
-
-• Confetes personalizados em caso de acerto
-
-• Opção de “Tentar novamente”
 
 **✨ Estilização com CSS3:**
 
@@ -100,9 +81,7 @@ Telas pequenas (celular)
 
 **♿ Acessibilidade:**
 
-*Para garantir maior inclusão e acessibilidade, o site conta com diversos recursos voltados para pessoas com deficiência. Um dos destaques é o plugin de Libras (Língua Brasileira de Sinais), retirado do projeto VLibras que é uma ferramenta oficial mantida pelo governo brasileiro que traduz o conteúdo do site para Libras, facilitando o acesso para pessoas surdas!*
-
-*Além disso, o site permite aumentar e diminuir o tamanho das letras (fontes), ajustar o contraste para melhorar a leitura, e também possui a funcionalidade de leitura em voz alta. Esse recurso está disponível para computadores, notebooks, tablets e alguns modelos de celulares, contribuindo para a inclusão de pessoas com deficiência visual ou com dificuldades de leitura.*
+*O site permite aumentar e diminuir o tamanho das letras (fontes) e também permite ajustar o contraste para melhorar a leitura*
 
 
 **🎨 Identidade Visual:**
@@ -170,9 +149,7 @@ Esse projeto foi uma verdadeira jornada de aprendizado. Superar as dificuldades 
 
 A minha Professora e colegas que me incentivaram e deram suporte durante a criação do site.
 
-Aos tutoriais e vídeos do YouTube que me ajudaram a entender melhor HTML, CSS e JavaScript.
-
-Ao projeto VLibras, por disponibilizar o plugin de acessibilidade em Libras.
+Aos tutoriais e vídeos do YouTube que me ajudaram a entender melhor HTML e CSS.
 
 Aos sites de referência, como Brasil Escola, CropLife Brasil e Wikipédia, que serviram como base para meu conteúdo.
 
