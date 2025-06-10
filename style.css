@@ -13,8 +13,6 @@ body {
     
 }
 
-
-
 .Meio{
   padding: 30px;
 }
@@ -796,150 +794,6 @@ text-justify: inter-word;
   color: rgb(18, 66, 12);
 }
 
-
-/* <-----QUIZ----> */
-
-.quiz-wrapper {
-  display: flex;
-  flex-direction: column;  
-  align-items: center;     
-  padding: 40px;
-  gap: 40px;               
-}
-
-
-.quiz-container {
-  background-color: #c8f8b5;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
-  width: 90%;
-  max-width: 500px;
-  color: #09380b; 
-  font-size: 1em;
-  font-family: Arial, sans-serif;
-  border: 2px solid rgb(46, 97, 42);
-}
-
-
-.question {
-  margin-bottom: 20px;
-  border: 2px solid rgb(15, 54, 12); 
-  border-radius: 12px;
-  padding: 15px;
-  background-color: #78c57f;
-}
-
-
-label {
-  display: block;
-  margin-top: 8px;
-  cursor: pointer;
-  color: #0b3006;
-  font-weight: 600;
-}
-
-
-button {
-  gap: 20px;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: rgb(82, 126, 70); 
-  border: 2px solid rgb(46, 97, 42);
-  color: rgb(24, 66, 12);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-  background-color: rgb(61, 117, 55); 
-  transform: scale(1.02);
-}
-
-
-.resultado-container {
-  border: 2px solid rgb(46, 97, 42);
-  background-color: #6f9e6e;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.4);
-  width: 200px;            
-  min-height: 100px;
-  text-align: center;
-  color: #19460e;
-  font-weight: 600;
-  font-size: 1.1em;
-  font-family: Arial, sans-serif;
-}
-
-.resultado-container h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #0d3d08;
-  font-weight: 600;
-  font-size: 1em;
-  font-family: Arial, sans-serif;
-}
-
-
-#respostas {
-  margin-top: 40px;
-}
-
-/* Caixa de resposta */
-.resposta-box {
-  border: 2px solid rgb(46, 97, 42);
-  border-radius: 12px;
-  padding: 10px;
-  background-color: #d1e2e9;
-  margin-bottom: 10px;
-  color: #0b3006;
-  font-weight: 600;
-}
-
-
-.confetti-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1000;
-}
-
-
-.confetti {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  opacity: 0.8;
-  animation: fall linear forwards;
-  background-color: rgb(128, 187, 112);
-  border-radius: 2px;
-  box-shadow: 0 0 2px rgb(74, 141, 67);
-}
-
-
-@keyframes fall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-  }
-}
-
-
-
-
-
 .FooterCon {
   display: flex;
   flex-wrap: wrap;
@@ -1023,29 +877,6 @@ button:hover {
   margin-top: 0px;
   user-select: none;
 }
-
-
-
-#btnTopo {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  font-size: 18px;
-  cursor: pointer;
-  border: 2px solid rgb(37, 77, 33);
-  border-radius: 100%;
-  background-color: #91db7a;
-  color: #11380a;
-  display: none;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-
-#btnTopo:hover {
-  background-color: #66bd63;
-}
-
 
 
 /* RESPONSIVIDADE*/
