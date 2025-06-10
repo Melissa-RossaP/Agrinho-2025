@@ -94,9 +94,9 @@ Telas pequenas (celular)
 
 As imagens utilizadas no site foram retiradas de:
 
-• Wikimedia Commons — banco de imagens livres
+• Wikimedia Commons - banco de imagens livres
 
-• Pixabay — imagens gratuitas e de uso livre
+• Pixabay - imagens gratuitas e de uso livre
 
 • Fotos autorais por Melissa Rossa Pereira
 
