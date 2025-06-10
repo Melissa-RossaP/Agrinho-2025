@@ -272,7 +272,7 @@ cursor: pointer;
 }
 
 #aumentar:checked ~ .PRINCIPAL {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 #diminuir:checked ~ .PRINCIPAL {
@@ -280,7 +280,7 @@ cursor: pointer;
 }
 
 #normal:checked ~ .PRINCIPAL {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 
