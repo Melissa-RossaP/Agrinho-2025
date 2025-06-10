@@ -272,15 +272,15 @@ cursor: pointer;
 }
 
 #aumentar:checked ~ .PRINCIPAL {
-  font-size: 26px;
+  font-size: 22px;
 }
 
 #diminuir:checked ~ .PRINCIPAL {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 #normal:checked ~ .PRINCIPAL {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 
