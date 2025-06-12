@@ -6,7 +6,7 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0px;
-    background-color: #dcf5c0;
+    background-color: #ffffff;
     line-height: 1.6;
     align-items: center;
     text-align: justify;
@@ -61,7 +61,115 @@ header.menu-aberto {
 }
 
 
-  
+.menuEnav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; 
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px; 
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+
+nav ul li a {
+  display: inline-block;
+  color: rgb(29, 75, 25);
+  text-decoration: none;
+  font-size: 0.85em;
+  padding: 5px 10px;
+  background-color: rgb(81, 156, 74);
+  border: 2.5px solid rgb(74, 141, 67);
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgb(58, 119, 51);
+  border-color: rgb(52, 78, 50);
+  color: rgb(21, 51, 12);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+
+.Divs {
+  padding: 5px 10px;
+  font-size: 0.85em;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2.5px solid rgb(74, 141, 67);
+  border-radius: 5px;
+  display: inline-block;
+  user-select: none;
+  color: rgb(29, 75, 25);
+  background-color: rgb(81, 156, 74);
+  transition: background-color 0.3s, transform 0.3s, color 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Divs:hover {
+  background-color: rgb(58, 119, 51);
+  border-color: rgb(52, 78, 50);
+  color: rgb(21, 51, 12);
+  transform: scale(1.2);
+}
+
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menuzinho {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(33, 83, 33);
+  border-radius: 6px;
+  padding: 10px;
+  width: 100px;
+  gap: 5px;
+  margin: 0;
+  z-index: 100;
+}
+
+#toggle:checked + label + .menuzinho {
+  display: flex;
+}
+
+.menuzinho a {
+  display: inline-block;
+  color: rgb(10, 43, 7);
+  text-decoration: none;
+  font-size: 0.8em;
+  padding: 3px 6px;
+  background-color: rgb(81, 156, 74);
+  border: 2.5px solid rgb(74, 141, 67);
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s, color 0.3s;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.menuzinho a:hover {
+  background-color: rgb(58, 119, 51);
+  border-color: rgb(52, 78, 50);
+  color: rgb(21, 51, 12);
+  transform: scale(1);
+  cursor: pointer;
+}
+
 .Logo{
   display: flex;
   align-items: center;
@@ -142,7 +250,6 @@ cursor: pointer;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid rgb(52, 78, 50);
   border: 1px solid rgb(31, 77, 37);
   border-radius: 100%;
 }
@@ -246,38 +353,6 @@ cursor: pointer;
   color: white !important;
 }
 
-
-nav ul {
-    list-style-type: none; 
-    display: flex; 
-    flex-direction: column; 
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin-bottom: 10px; 
-  }
-  
-  nav ul li a {
-    display: inline-block; 
-    color: rgb(29, 75, 25); 
-    text-decoration: none; 
-    font-size: 1em;
-    padding: 3px 6px; 
-    background-color: rgb(81, 156, 74); 
-    border: 2.5px solid rgb(74, 141, 67); 
-    border-radius: 5px; 
-    transition: background-color 0.3s, transform 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: rgb(58, 119, 51);
-    border-color: rgb(52, 78, 50);
-    color: rgb(21, 51, 12);
-    transform: scale(1.2);
-    cursor: pointer;
-}
 
 .Explicacao {
   display: flex;
@@ -948,17 +1023,6 @@ text-justify: inter-word;
     font-size: 1em;
   }
 
-  
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  nav ul li {
-    margin: 5px 0;
-  }
-
   .carrossel{
     display: flex;
     flex-direction: column;
@@ -1141,17 +1205,20 @@ text-justify: inter-word;
 }
 
 @media (max-width: 768px) {
+  .menuEnav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
   nav ul {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-}
-@media (min-width: 769px) {
-  nav ul {
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
+
+  nav ul li {
+    margin-bottom: 5px;
   }
 }
 
