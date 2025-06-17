@@ -14,7 +14,7 @@ Este site tem como missão informar, inspirar e valorizar o papel do campo em no
 
 Através de um conteúdo educativo, quero contribuir para que mais pessoas entendam essa conexão fundamental entre campo e cidade.
 
-###🛠 Tecnologias Utilizadas:
+### 🛠 Tecnologias Utilizadas:
 
 Site desenvolvido no Visual Studio Code (VScode), utilizando HTML e CSS.
 
