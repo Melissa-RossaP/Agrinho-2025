@@ -1,6 +1,6 @@
 # Agrinho 2025 - Ruralidades Urbanas
 
-**🌾 Bem-vindo ao site Ruralidades Urbanas!🌾**
+### 🌾 Bem-vindo ao site Ruralidades Urbanas!🌾
 
 *Este projeto foi criado com o objetivo de ensinar de forma interativa sobre a agricultura, sua história, tipos e práticas sustentáveis.*
 
@@ -8,13 +8,13 @@
 
 *Nosso objetivo é valorizar o campo, sua história, importância e as inovações que o tornam essencial para a vida urbana e rural.*
 
-*🎯 Objetivo do Projeto:*
+### 🎯 Objetivo do Projeto:
 
 Este site tem como missão informar, inspirar e valorizar o papel do campo em nossas vidas. Mesmo morando em áreas urbanas, todos dependemos da agricultura para a alimentação, produtos e sustentabilidade.
 
 Através de um conteúdo educativo, quero contribuir para que mais pessoas entendam essa conexão fundamental entre campo e cidade.
 
-*🛠 Tecnologias Utilizadas:*
+###🛠 Tecnologias Utilizadas:
 
 Site desenvolvido no Visual Studio Code (VScode), utilizando HTML e CSS.
 
@@ -30,7 +30,7 @@ Google Fonts para fontes personalizadas
 
 
 
-*📋 Funcionalidades:*
+### 📋 Funcionalidades:
 
 • Splash screen de abertura
 
@@ -52,7 +52,7 @@ Google Fonts para fontes personalizadas
 
 *LinkedIn*
 
-**✨ Estilização com CSS3:**
+### ✨ Estilização com CSS3:
 
 *No CSS, utilizei diversas técnicas para garantir um site bonito, funcional e responsivo:*
 
@@ -79,18 +79,18 @@ Telas pequenas (celular)
 • Organização modular com comentários e seções bem divididas
 
 
-**♿ Acessibilidade:**
+### ♿ Acessibilidade:
 
 *O site permite aumentar e diminuir o tamanho das letras (fontes) e também permite ajustar o contraste para melhorar a leitura*
 
 
-**🎨 Identidade Visual:**
+### 🎨 Identidade Visual:
 
 • Logo original desenhada e criada manualmente por mim, Melissa Rossa Pereira
 
 • Escolha cuidadosa de cores, fontes e imagens para transmitir o tema rural-urbano
 
-**🖼 Créditos das Imagens:**
+### 🖼 Créditos das Imagens:
 
 As imagens utilizadas no site foram retiradas de:
 
@@ -100,7 +100,7 @@ As imagens utilizadas no site foram retiradas de:
 
 • Fotos autorais por Melissa Rossa Pereira
 
-**📚 Referências e Autoria:**
+### 📚 Referências e Autoria:
 
 *Todo o conteúdo textual deste site foi escrito por mim, Melissa Rossa Pereira, com base em pesquisas realizadas em fontes confiáveis. As informações foram retiradas e adaptadas a partir dos seguintes sites:*
 
@@ -114,13 +114,12 @@ As imagens utilizadas no site foram retiradas de:
 
 *O conteúdo foi reescrito com minhas próprias palavras, com o objetivo de tornar o aprendizado mais acessível e educativo.*
 
-
-**✒️ Licença:**
+### ✒️ Licença:
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
 
 
- **📈 Reflexão sobre o aprendizado:**
+ ### Reflexão sobre o aprendizado:
 
 Neste projeto, enfrentei grandes desafios, especialmente na criação do design responsivo e na implementação da acessibilidade. Ajustar o site para funcionar bem em diferentes dispositivos e garantir o acesso para pessoas com deficiência exigiu muita dedicação, paciência e estudo. Também precisei entender melhor a integração entre HTML, CSS e JavaScript para criar funcionalidades interativas e responsivas. Implementar o plugin VLibras me ensinou muito sobre design acessível, ampliando o alcance do conteúdo.
 
@@ -132,7 +131,7 @@ Esse projeto foi uma verdadeira jornada de aprendizado. Superar as dificuldades 
 **Se quiser sugerir melhorias ou relatar algum problema, fique à vontade para entrar em contato comigo pelas redes sociais disponíveis aqui e no meu site.**
 
 
-**📱 Contato:**
+### **📱 Contato:**
 
 📞 Número: [ +55 (42) 9 9910-6956 ](https://wa.me/554299106956)
 
@@ -143,7 +142,7 @@ Esse projeto foi uma verdadeira jornada de aprendizado. Superar as dificuldades 
 🔗 LinkedIn: [Melissa Rossa Pereira](https://www.linkedin.com/in/melissa-rossa-pereira-271486277/)
 
 
-**🪄Agradecimentos:**
+### 🪄Agradecimentos:
 
 **Gostaria de agradecer a todas as pessoas e recursos que contribuíram para o desenvolvimento deste projeto:**
 
@@ -155,7 +154,7 @@ Aos sites de referência, como Brasil Escola, CropLife Brasil e Wikipédia, que 
 
 *Muito obrigada a todos!*
 
-*🌟 E para fechar com chave de ouro... Textos autorais por Melissa Rossa Pereira.*
+### 🌟 E para fechar com chave de ouro... Textos autorais por Melissa Rossa Pereira.
 
 ## 📌 Status do Projeto
  O site já esta concluído!
